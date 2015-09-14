@@ -7,8 +7,12 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+// add page
+//var welcome = require('./routes/welcome');
+//var creattion = require('/routes/creation');
+//var help = require('/routes/help');
 
-var app = express();
+var app = express(); //let express handle user requests
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,6 +28,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+//app.use('/welcome', welcome);
+//app.use('/creation', creattion);
+//app.use('/help', help);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -56,5 +63,30 @@ app.use(function(err, req, res, next) {
   });
 });
 
+var HIGH = 10;
+var LOW = 0;
+
+//learning
+function getRandomNum() {
+  return Math.floor(Math.random()*(HIGH - LOW + 1) + LOW);
+}
+
+function User() {
+  this.habilete;
+  this.endurance;
+  this.initalHabilete = function initalHabilete() {
+      this.habilete = 10 + getRandomNum();
+      console.log("habilete " + this.habilete);
+  }
+  this.initialEndurance = function initialEndurance() {
+    this.endurance = 20 + getRandomNum();
+    console.log("endurance " + this.endurance);
+  }
+}
+
+var myAccount = new User();
+myAccount.initalHabilete();
+myAccount.initialEndurance();
+///////////
 
 module.exports = app;

@@ -6,10 +6,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express, hi' });
 });
 
-/* GET Game Welcome page. */
-router.get('/welcome', function(req, res) {
-           res.render('welcome', { title: 'Hello, Game!' });
-           });
+
 
 /* GET Game Creation page. */
 router.get('/creation', function(req, res) {
