@@ -4,11 +4,13 @@ form(name="form-action", method="post")
    fieldset
       legend Combat Record
          table
-            thead
-               tr: th Lone Wolf EP
-                  th Combat Ratio
-                  th Enemy EP
-            tbody
-               tr: td 16
-                  td -3
-                  td 28
+            tr
+               th Lone Wolf EP
+               th Combat Ratio
+               th Enemy EP
+
+            each record in records
+               tr
+                  td=record.wolfEp
+                  td=record.ratio
+                  td=record.enemyEP

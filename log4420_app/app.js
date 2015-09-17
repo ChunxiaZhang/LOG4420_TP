@@ -2,19 +2,20 @@ var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
+
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-// add page
-//var welcome = require('./routes/welcome');
-//var creattion = require('/routes/creation');
-//var help = require('/routes/help');
+var creation = require('./routes/creation');
+var games = require('./routes/page1');
+
 
 var app = express(); //let express handle user requests
 
 // view engine setup
+//app.set('views', [path.join(__dirname, 'views/games'), path.join(__dirname, 'views')]);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
@@ -28,9 +29,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-//app.use('/welcome', welcome);
-//app.use('/creation', creattion);
-//app.use('/help', help);
+app.use('/creation', creation);
+app.use('/page1', games);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
