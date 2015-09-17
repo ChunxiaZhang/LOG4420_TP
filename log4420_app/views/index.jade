@@ -1,11 +1,17 @@
 extends layout
 
 block myNav
-  include navigation.jade
+  include templates/navigation.jade
 
 block content
   h1= title
   p Welcome to #{title}
+  p You are Lone Wolf—last of the Kai Lords. Shocking news has just reached your homeland that Vonotar the Traitor still lives and now rules over the Ice Barbarians of Kalte.
+  p The King has vowed to your people that Vonotar will be brought to justice for his crimes. But it is a promise that only you can fulfil.
+  p In The Caverns of Kalte, you must brave the terrible dangers of the ice kingdom in your quest to capture your most hated foe. But be warned! It is a challenge that will test your skill and endurance to the very limit.
 
+  a(href='/creation') Start Game
+  p
+    button(class="btn", onclick="window.open('/creation', '_self')") Start Game
 block myFooter
-  include footer.jade
+  include templates/footer.jade

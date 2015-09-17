@@ -1,0 +1,115 @@
+//
+   Created by Zoe on 15-09-16.
+
+
+form(name="form-action", method="post")
+   fieldset
+      legend Points
+      div
+         label Combat Skill
+         input(type="number", name="Combat Skill", disabled=true)
+         label Endurance Points
+         input(type="number", name="Endurance Points", disabled=true)
+
+         div
+            label Gold Crowns
+            input(type="number", name="Gold Crowns", disabled=true)
+
+   fieldset
+      legend Combat Record
+         table
+            thead
+               tr: th Lone Wolf EP
+                   th Combat Ratio
+                   th Enemy EP
+            tbody
+               tr: td 16
+                   td -3
+                   td 28
+
+   fieldset
+        legend Choose five Kai Disciplines
+
+        input(type="checkbox", name="camouflage", checked=false)
+        label Camouflage
+        p
+            input(type="checkbox", name="hunting", checked=false)
+            label Hunting
+
+        p
+           input(type="checkbox", name="sixthsense", checked=false)
+           label Sixth Sense
+
+        p
+           input(type="checkbox", name="tracking", checked=false)
+           label Tracking
+
+        p
+           input(type="checkbox", name="healing", checked=false)
+           label Healing
+
+        p
+           input(type="checkbox", name="weaponskill", checked=false)
+           label Weaponskill
+
+        p
+           input(type="checkbox", name="mindshield", checked=false)
+           label Mindshield
+
+        p
+           input(type="checkbox", name="mindblast", checked=false)
+           label Mindblast
+
+        p
+           input(type="checkbox", name="animalkinship", checked=false)
+           label Animal Kinship
+
+        p
+           input(type="checkbox", name="mindovermatter", checked=false)
+           label Mind Over Matter
+
+
+   fieldset
+        legend Choose two equipments
+
+        input(type="checkbox", name="sword", checked=false)
+        label Sword (Weapons)
+        p
+            input(type="checkbox", name="shortsword", checked=false)
+            label Short Sword (Weapons)
+
+        p
+           input(type="checkbox", name="padded", checked=false)
+           label Padded Leather Waistcoat (Special Items). This adds 2 ENDURANCE points to your total.
+
+        p
+           input(type="checkbox", name="spear", checked=false)
+           label Spear (Weapons)
+
+        p
+           input(type="checkbox", name="mace", checked=false)
+           label Mace (Weapons)
+
+        p
+           input(type="checkbox", name="warhammer", checked=false)
+           label Warhammer (Weapons)
+
+        p
+           input(type="checkbox", name="axe", checked=false)
+           label Axe (Weapons)
+
+        p
+           input(type="checkbox", name="potion", checked=false)
+           label Potion of Laumspur (Backpack Items). This restores 4 ENDURANCE points to your total when swallowed after combat. There is only enough for one dose.
+
+        p
+            input(type="checkbox", name="quarterstaff", checked=false)
+            label Quarterstaff (Weapons)
+
+        p
+            input(type="checkbox", name="rations", checked=false)
+            label Special Rations (Meals). This counts as one meal.
+
+        p
+           input(type="checkbox", name="broadsword", checked=false)
+           label Broadsword (Weapons)
