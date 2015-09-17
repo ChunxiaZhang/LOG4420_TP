@@ -63,30 +63,5 @@ app.use(function(err, req, res, next) {
   });
 });
 
-var HIGH = 10;
-var LOW = 0;
-
-//learning
-function getRandomNum() {
-  return Math.floor(Math.random()*(HIGH - LOW + 1) + LOW);
-}
-
-function User() {
-  this.habilete;
-  this.endurance;
-  this.initalHabilete = function initalHabilete() {
-      this.habilete = 10 + getRandomNum();
-      console.log("habilete " + this.habilete);
-  }
-  this.initialEndurance = function initialEndurance() {
-    this.endurance = 20 + getRandomNum();
-    console.log("endurance " + this.endurance);
-  }
-}
-
-var myAccount = new User();
-myAccount.initalHabilete();
-myAccount.initialEndurance();
-///////////
 
 module.exports = app;

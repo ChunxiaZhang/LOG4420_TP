@@ -5,27 +5,10 @@
 form(name="form-action", method="post")
    fieldset
       legend Points
-      div
-         label Combat Skill
-         input(type="number", name="Combat Skill", disabled=true)
-         label Endurance Points
-         input(type="number", name="Endurance Points", disabled=true)
+      p Comabt Skill: #{pagerData.wolf.getCombatSkill()}
+      p Endurance: #{pagerData.wolf.getEndurancePoints()}
+      p Gold Crowns: #{pagerData.wolf.getGoldCrowns()}
 
-         div
-            label Gold Crowns
-            input(type="number", name="Gold Crowns", disabled=true)
-
-   fieldset
-      legend Combat Record
-         table
-            thead
-               tr: th Lone Wolf EP
-                   th Combat Ratio
-                   th Enemy EP
-            tbody
-               tr: td 16
-                   td -3
-                   td 28
 
    fieldset
         legend Choose five Kai Disciplines
@@ -72,44 +55,44 @@ form(name="form-action", method="post")
    fieldset
         legend Choose two equipments
 
-        input(type="checkbox", name="sword", checked=false)
+        input(type="checkbox", name="sword", checked=false, class="weapon", id="weapon_sword")
         label Sword (Weapons)
         p
-            input(type="checkbox", name="shortsword", checked=false)
+            input(type="checkbox", name="shortsword", checked=false, class="weapon", id="weapon_shortsword")
             label Short Sword (Weapons)
 
         p
-           input(type="checkbox", name="padded", checked=false)
+           input(type="checkbox", name="padded", checked=false, class="special_item", id="special_item_padded")
            label Padded Leather Waistcoat (Special Items). This adds 2 ENDURANCE points to your total.
 
         p
-           input(type="checkbox", name="spear", checked=false)
+           input(type="checkbox", name="spear", checked=false, class="weapon", id="weapon_spear")
            label Spear (Weapons)
 
         p
-           input(type="checkbox", name="mace", checked=false)
+           input(type="checkbox", name="mace", checked=false, class="weapon", id="weapon_mace")
            label Mace (Weapons)
 
         p
-           input(type="checkbox", name="warhammer", checked=false)
+           input(type="checkbox", name="warhammer", checked=false, class="weapon", id="weapon_warhammer")
            label Warhammer (Weapons)
 
         p
-           input(type="checkbox", name="axe", checked=false)
+           input(type="checkbox", name="axe", checked=false, class="weapon", id="weapon_axe")
            label Axe (Weapons)
 
         p
-           input(type="checkbox", name="potion", checked=false)
+           input(type="checkbox", name="potion", checked=false, class="backpack_item", id="backpack_item_potion")
            label Potion of Laumspur (Backpack Items). This restores 4 ENDURANCE points to your total when swallowed after combat. There is only enough for one dose.
 
         p
-            input(type="checkbox", name="quarterstaff", checked=false)
+            input(type="checkbox", name="quarterstaff", checked=false, class="weapon", id="weapon_quarterstaff")
             label Quarterstaff (Weapons)
 
         p
-            input(type="checkbox", name="rations", checked=false)
+            input(type="checkbox", name="rations", checked=false, class="meal", id="meal_rations")
             label Special Rations (Meals). This counts as one meal.
 
         p
-           input(type="checkbox", name="broadsword", checked=false)
+           input(type="checkbox", name="broadsword", checked=false, class="weapon", id="weapon_broadsword")
            label Broadsword (Weapons)

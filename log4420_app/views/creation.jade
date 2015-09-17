@@ -4,8 +4,8 @@ block myNav
   include templates/navigation
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1= pagerData.title
+  p Welcome to #{pagerData.title}
 
   div
     include templates/action_form
