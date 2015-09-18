@@ -1,8 +1,8 @@
-//
-   Created by Zoe on 15-09-18.
 extends layout
 block content
    h1= title
    p Welcome to #{title}
+   p main page #{wolf.getCombatSkill()}
+   include templates/form_info.jade
    !{htmlPage}
 

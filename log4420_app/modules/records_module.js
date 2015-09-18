@@ -5,7 +5,8 @@
  * Created by Zoe on 15-09-17.
  */
 
-var records = [{wolfEp: "16", ratio: "-3", enemyEP: "14", result: true}];
+var records = [{wolfEp: "16", ratio: "-3", enemyEP: "14", result: true},
+                {wolfEp: "19", ratio: "4", enemyEP: "16", result: true}];
 var wolfEp;
 var ratio;
 var enemyEP;

@@ -8,11 +8,6 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var creation = require('./routes/creation');
-var page1 = require('./routes/page1');
-var page160 = require('./routes/page160');
-var page78 = require('./routes/page78');
-var help = require('./routes/help');
 
 var app = express(); //let express handle user requests
 
@@ -31,11 +26,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-app.use('/creation', creation);
-app.use('/page1', page1);
-app.use('/page160', page160);
-app.use('/page78', page78);
-app.use('/help', help);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
