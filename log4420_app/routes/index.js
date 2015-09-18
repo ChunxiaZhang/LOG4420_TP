@@ -8,4 +8,5 @@ router.get('/', function(req, res, next) {
     res.render('index', { title: 'Welcome Lone Wolf Game' });
 });
 
+
 module.exports = router;
