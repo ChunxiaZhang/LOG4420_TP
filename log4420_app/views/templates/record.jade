@@ -1,16 +1,14 @@
 //
    Created by Zoe on 15-09-17.
-form(name="form-action", method="post")
-   fieldset
-      legend Combat Record
-         table
-            tr
-               th Lone Wolf EP
-               th Combat Ratio
-               th Enemy EP
 
-            each record in records
-               tr
-                  td=record.wolfEp
-                  td=record.ratio
-                  td=record.enemyEP
+table
+   tr
+      th Lone Wolf EP
+      th Combat Ratio
+      th Enemy EP
+
+      each record in records
+         tr
+           td=record.wolfEp
+           td=record.ratio
+           td=record.enemyEP

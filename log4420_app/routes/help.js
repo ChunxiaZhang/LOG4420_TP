@@ -1,11 +1,12 @@
+/**
+ * Created by Zoe on 15-09-17.
+ */
 var express = require('express');
 var router = express.Router();
 
-
-
-/* GET home page. */
+/* GET users listing.*/
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Welcome Lone Wolf Game' });
+    res.render('help', {title: "Help"});
 });
 
 module.exports = router;

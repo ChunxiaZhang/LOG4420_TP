@@ -1,12 +1,12 @@
 doctype html
 html
-
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   nav
-    block myNav
+    include templates/navigation
   body
     block content
+
   footer
-    block myFooter
+    include templates/footer
