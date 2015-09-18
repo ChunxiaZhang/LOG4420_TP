@@ -6,7 +6,7 @@ var router = express.Router();
 
 /* GET users listing.*/
 router.get('/', function(req, res, next) {
-    res.render('help', {title: "Help"});
+    res.render('help', {title: "Game rules"});
 });
 
 module.exports = router;

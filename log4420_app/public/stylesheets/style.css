@@ -1,8 +1,118 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+.title {
+ position: absolute;
+ top: 0px;
+ left: 100px;
+ width: 550px;
+ height: 100px;
+ padding: 0px;
+ border: 0px none;
+ margin: 0px;
 }
 
-a {
-  color: #00B7FF;
+.body {
+ position: absolute;
+ top: 95px;
+ left: 100px;
+ width: 450px;
+ padding: 0px;
+ border: 0px none;
+ margin: 0px;
 }
+
+.nav {
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ width: 550px;
+ height: 100px;
+ padding: 0px;
+ border: 0px none;
+ margin: 0px;
+ font-size: 0.8em;
+}
+
+p {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+/* div.numbered h3, div.glossary h3 {
+ position: absolute;
+ top: -56px;
+ left: 404px;
+ width: 39px;
+ height: 18pt;
+ margin: 0px;
+ border: 0px none;
+ padding: 0px;
+ font-size: 14pt;
+ background-color: transparent;
+ text-align: center;
+ vertical-align: middle;
+} */
+
+img.accent {
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+navi {
+ background-color: #fffaa6;
+ color: #007366;
+ font-family: Souvenir, Georgia, "Times New Roman", Times, serif;
+}
+
+body {
+ background-color: #ffffa6;
+ color: #003366;
+ font-family: Souvenir, Georgia, "Times New Roman", Times, serif;
+}
+
+
+hr { margin-left: 0px; }
+
+p{ 
+text-align: left 
+}
+
+b { font-weight: bold }
+
+h1, h2, h3, h4, h5, h6 {
+ margin-top: 0px;
+ border: 0px none;
+ padding: 0px;
+ clear: left;
+ text-align: center;
+}
+
+:link, :visited {
+ background-color: transparent;
+ color: #0099cc;
+ text-decoration: none;
+ font-weight: bold;
+}
+
+ul#menu {
+    padding: 0;
+    margin-bottom: 11px;
+}
+
+ul#menu li {
+    display: inline;
+    margin-right: 3px;
+}
+
+ul#menu li a {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #696969;
+    border-radius: 4px 4px 0 0;
+}
+
+ul#menu li a:hover {
+    color: white;
+    background-color: black;
+} 

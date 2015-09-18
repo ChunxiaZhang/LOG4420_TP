@@ -11,7 +11,7 @@ console.log(wolf.getCombatSkill());
 
 /* GET Game Creation page.*/
 router.get('/', function(req, res) {
-    res.render('creation', {title: "Start Game", wolf:wolf});
+    res.render('creation', {title: "Create character", wolf:wolf});
 });
 
 module.exports = router;
