@@ -8,8 +8,6 @@ router.get('/', function(req, res, next) {
     res.render('index', { title: 'The Lone Wolf gamebook' });
 });
 
-/**/
-
 var initial = require("./../modules/initial_module");
 var wolf = require("./../modules/player_module");
 var equipments_mudule = require("./../modules/equipments_module");
@@ -47,9 +45,9 @@ router.get('/:value', function(req, res, next) {
         res.render('page', { title: v, htmlPage: html , wolf:wolf, equipments:equipments, records:records})
 
     });
+
+
 });
-
-
 
 
 module.exports = router;
