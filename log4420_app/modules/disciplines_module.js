@@ -8,7 +8,11 @@ var discipline = function(name, ability) {
     this.ability = ability;
 };
 
-var diciplines = [{name:"Hunting", ability:"hunt food, speed"},{},{},{},{}];
+var diciplines = [{name:"Hunting", ability:"hunt food"},
+				{name:"Tracking", ability:"find paths"},
+				{name:"Weaponskill", ability:"power"},
+				{name:"Healing", ability:"high endurance"},
+				{name:"Camouflage", ability:"speed"}];
 
 exports.addDiscipline = function(name, ability) {
     diciplines.push(discipline((name, ability)));

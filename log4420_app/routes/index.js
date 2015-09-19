@@ -10,15 +10,17 @@ router.get('/', function(req, res, next) {
 
 var initial = require("./../modules/initial_module");
 var wolf = require("./../modules/player_module");
-var equipments_mudule = require("./../modules/equipments_module");
+var equipments_module = require("./../modules/equipments_module");
+var disciplines_module = require("./../modules/disciplines_module");
 var records_module = require("./../modules/records_module");
 wolf.setCombatSkill(initial.get10_20RandomNum());
 wolf.setEndurancePoints(initial.get20_30RandomNum());
 wolf.setGoldCrowns(initial.get20_30RandomNum());
 console.log(wolf.getCombatSkill());
 
-var equipments = equipments_mudule.getEquipments();
+var equipments = equipments_module.getEquipments();
 var records = records_module.getRecords();
+var disciplines = disciplines_module.getDisciplines();
 
 /* GET Game Creation page.*/
 router.get('/creation', function(req, res) {
@@ -42,11 +44,9 @@ router.get('/:value', function(req, res, next) {
     // On veut d'abord convertir la page en HTML, une fois que la conversion
     // est faite, on va injecter le HTML généré vers le fichier page.jade
     res.render(page, function(err, html) {
-        res.render('page', { title: v, htmlPage: html , wolf:wolf, equipments:equipments, records:records})
+        res.render('page', { title: v, htmlPage: html , wolf:wolf, equipments:equipments, records:records, disciplines:disciplines})
 
     });
-
-
 });
 
 
