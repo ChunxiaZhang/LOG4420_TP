@@ -1,14 +1,19 @@
 doctype html
 html
-  head
-    title= title
-    //link(rel='stylesheet', href='/stylesheets/style.css')
 
-  include templates/navigation
-  
-  body
-    block content
+head
+	title= title
 
-    include templates/footer
+	//link(rel='stylesheet', href='/stylesheets/style.css')
 
+	include templates/navigation
 
+	body
+		block content
+		
+	aside
+		figure
+			a(href='http://www.projectaon.org/en/Main/Home')
+			img(src='/pictures/img_Lone-Wolf-logo.png')
+
+	include templates/footer
