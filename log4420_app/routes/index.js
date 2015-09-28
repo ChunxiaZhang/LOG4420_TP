@@ -1,11 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
     res.render('index', { title: 'The Lone Wolf gamebook' });
+    //res.json({message:'horray! Welcome to our api'});
 });
 
 var initial = require("./../modules/initial_module");
@@ -17,6 +16,7 @@ wolf.setCombatSkill(initial.get10_20RandomNum());
 wolf.setEndurancePoints(initial.get20_30RandomNum());
 wolf.setGoldCrowns(initial.get20_30RandomNum());
 console.log(wolf.getCombatSkill());
+
 
 var equipments = equipments_module.getEquipments();
 var records = records_module.getRecords();

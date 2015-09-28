@@ -1,6 +1,7 @@
 /**
  * Created by Zoe on 15-09-18.
  */
+
 var name;
 var ability;
 var discipline = function(name, ability) {
@@ -21,3 +22,11 @@ exports.addDiscipline = function(name, ability) {
 exports.getDisciplines = function() {
     return diciplines;
 }
+
+/*
+console.log("I am here");
+
+var disciplines_checkbox_list = document.querySelectorAll("#check_disciplines");
+for(var i = 0; i < disciplines_checkbox_list.length; i++) {
+    console.log("here");
+}*/

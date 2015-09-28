@@ -1,19 +1,21 @@
 doctype html
 html
 
-head
-	title= title
+    head
+        title= title
 
-	link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='http://code.jquery.com/jquery-1.9.1.js')
+    script(src='/javascripts/clint_game.js')
 
-	include templates/navigation
+    include templates/navigation
 
-	body
-		block content
-		
-	aside
-		figure
-			a(href='http://www.projectaon.org/en/Main/Home')
-			img(src='/pictures/img_Lone-Wolf-logo.png')
+    body
+        block content
 
-	include templates/footer
+    aside
+        figure
+            a(href='http://www.projectaon.org/en/Main/Home')
+            img(src='/images/img_Lone-Wolf-logo.png')
+
+    include templates/footer
