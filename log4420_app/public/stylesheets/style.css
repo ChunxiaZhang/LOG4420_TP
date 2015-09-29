@@ -137,3 +137,17 @@ button.submit:active {
     -o-box-shadow: 0 0 10px 5px #356b0b inset;
 
 }
+
+#all_items{
+    position: relative;
+}
+
+div .items{
+    position: absolute;
+    float: right;
+    top: 100%;
+    width: 100px;
+    height: 100px;
+    background: greenyellow;
+    display: none;
+}
