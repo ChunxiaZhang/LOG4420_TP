@@ -9,15 +9,16 @@ ul
       -if(equipment.attri=="weapon")
          li=equipment.equipment_name + " (" + equipment.attri + ")"
 div(id='all_items')
-   button(id="special_items_btn" type="button") Special Items
-   div(id="special_items" style="display:none;" class="items")
+   a(href="#special_items" id="special_items_btn")
+   button Special Items
+   div(id="special_items" class="items")
       ul
          each equipment in equipments
             -if(equipment.attri=="specialItem")
                li=equipment.equipment_name + " (" + equipment.attri + ")"
 
-   button(id="backpack_items_btn" type="button") Backpack Items
-   div(id="backpack_items" style="display:none;" class="items")
+   a(href="#backpack_items" id="backpack_items_btn" type="button") Backpack Items
+   div(id="backpack_items" class="items")
       ul
          each equipment in equipments
             -if(equipment.attri=="backpackItem")

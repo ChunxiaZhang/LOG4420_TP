@@ -1,18 +1,27 @@
 
 body {
+    position: relative;
     background-color: beige;
     color: #133e40;
     font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
 }
 
+head {
+    position: relative;
+    top: 200px;
+}
+
 nav {
+     position: fixed;
      background: #FFF;
      border: 1px solid #dedede;
      border-radius: 4px;
      box-shadow: 0 2px 2px -1px rgba(0,0,0,0.055);
      color: #888;
      display: block;
-     margin: 8px 22px 8px 22px;
+     top: 0px;
+     left: 0px;
+     width: 100%;
      overflow: hidden;
  }
 
@@ -57,9 +66,18 @@ nav > ul > li:hover > a {
     color: rgb(255, 255, 255);
 }
 
-/*form style*/
-.form-action {
+#flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
 
+#flex-container > .flex-item {
+    -webkit-flex: auto;
+    flex: auto;
+    margin: 20px;
+    padding: 20px;
 }
 
 .form-action li {
@@ -142,12 +160,14 @@ button.submit:active {
     position: relative;
 }
 
-div .items{
-    position: absolute;
-    float: right;
-    top: 100%;
-    width: 100px;
-    height: 100px;
-    background: greenyellow;
+#all_items .items {
     display: none;
+}
+.items:target{
+    display: table;
+    opacity: 1;
+    width: 200px;
+    height: 200px;
+    padding: 50px;
+    background: black;
 }

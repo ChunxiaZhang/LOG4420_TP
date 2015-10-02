@@ -5,8 +5,10 @@ block content
       img(src="/images/pageTitre.png")
    h1= title
 
-   section !{htmlPage}
-
-      include templates/form_info.jade
-      include templates/battle_result
+   section(id="flex-container")
+      div(class="flex-item")
+         !{htmlPage}
+      div(class="flex-item")
+         include templates/form_info.jade
+         include templates/battle_result
 
