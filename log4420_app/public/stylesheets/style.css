@@ -1,6 +1,7 @@
 
 body {
     position: relative;
+    top: 45px;
     background-color: beige;
     color: #133e40;
     font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
@@ -179,4 +180,8 @@ img.text {
 
 p{
     text-align: justify;
+}
+
+#backpack_change{
+    position: center;
 }
