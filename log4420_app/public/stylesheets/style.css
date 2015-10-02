@@ -8,7 +8,7 @@ body {
 
 head {
     position: relative;
-    top: 200px;
+    margin-top: 200px;
 }
 
 nav {
@@ -160,14 +160,15 @@ button.submit:active {
     position: relative;
 }
 
-#all_items .items {
+.all_items .items {
     display: none;
 }
-.items:target{
-    display: table;
+.all_items .items:target{
+    display: block;
     opacity: 1;
     width: 200px;
     height: 200px;
     padding: 50px;
     background: black;
+    z-index: 3;
 }
