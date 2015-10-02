@@ -171,3 +171,12 @@ button.submit:active {
     padding: 50px;
     background: black;
 }
+
+img.text {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+p{
+    text-align: justify;
+}
