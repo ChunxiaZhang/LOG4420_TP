@@ -7,10 +7,10 @@ body {
     margin: 0;
     padding: 0;
 }
-
 div.container p{
     text-align: justify;
 }
+
 
 div.container p br {
     line-height: 200%;
@@ -106,6 +106,13 @@ nav > ul > li:hover > a {
     margin: 20px;
     padding: 20px;
 }
+
+#flex-item-point {
+    width: 60%;
+}
+#adventure {
+    width: 40%;
+}
 /*-------------------*/
 
 /* 2. --*/
@@ -143,9 +150,9 @@ nav > ul > li:hover > a {
 /*-------------------*/
 
 /* Button Style */
-button.submit {
+#special_items_btn,#backpack_items_btn, button.submit {
     position: relative;
-    left: 50px;
+    left: 20px;
     background-color: #68b12f;
     background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
     background: -webkit-linear-gradient(top, #68b12f, #50911e);
@@ -190,6 +197,7 @@ a .close_items{
     display: none;
 }
 
+
 /*4.show box*/
 .items {
 
@@ -216,6 +224,13 @@ a .close_items{
     visibility: visible;
     display: block;
 
+}
+
+#item_btn_container {
+    padding: 20px;
+}
+#special_items_btn,#backpack_items_btn {
+    text-decoration: none;
 }
 
 .list-items{
@@ -258,3 +273,14 @@ li.gold {
     background-size: 40px 40px;
 }
 /*************/
+
+img.text {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+p{
+    text-align: justify;
+}
+
+

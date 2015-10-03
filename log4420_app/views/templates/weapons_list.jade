@@ -2,13 +2,14 @@
    Created by Zoe on 15-09-17.
 
 
-h1 Wolf's equipments
+h3 Wolf's equipments
 p Weapons
 ul
    each equipment in equipments
       -if(equipment.attri=="weapon")
          li=equipment.equipment_name + " (" + equipment.attri + ")"
 
-a(href="#special_items" id="special_items_btn") Special Items
-br
-a(href="#backpack_items" id="backpack_items_btn") Backpack Items
+div#item_btn_container
+   a(href="#special_items" id="special_items_btn") Special Items
+   p
+   a(href="#backpack_items" id="backpack_items_btn") Backpack Items

@@ -15,6 +15,7 @@ var records_module = require("./../modules/records_module");
 wolf.setCombatSkill(initial.get10_20RandomNum());
 wolf.setEndurancePoints(initial.get20_30RandomNum());
 wolf.setGoldCrowns(initial.get20_30RandomNum());
+wolf.setRandomNumber(initial.get0_10RandomNum())
 console.log(wolf.getCombatSkill());
 
 
