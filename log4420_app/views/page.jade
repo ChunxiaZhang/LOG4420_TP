@@ -6,7 +6,26 @@ block content
    h1= title
 
    section(id="flex-container")
-      div(class="flex-item")
+
+      div#backpack_items.items
+         a(href="#flex-item-point")
+         .list-items
+            ul
+               each equipment in equipments
+                  -if(equipment.attri=="backpackItem")
+                     -if(equipment.equipment_name == "Potion")
+                        li(class="potion")=equipment.equipment_name
+                     li(class="gold")=wolf.getGoldCrowns()+ " Gold Crowns"
+      div#special_items.items
+         a(href="#flex-item-point")
+         .list-items
+            ul
+               each equipment in equipments
+                  -if(equipment.attri=="specialItem")
+                     -if(equipment.equipment_name == "Padded Leather Waistcoat")
+                        li(class="plw")=equipment.equipment_name
+
+      div(class="flex-item" id="flex-item-point")
          !{htmlPage}
       div(class="flex-item")
          include templates/form_info.jade
