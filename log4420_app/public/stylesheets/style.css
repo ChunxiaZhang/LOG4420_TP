@@ -1,6 +1,7 @@
 
 body {
     position: relative;
+    top: 45px;
     background-color: beige;
     color: #133e40;
     font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
@@ -8,7 +9,7 @@ body {
 
 head {
     position: relative;
-    margin-top: 200px;
+    top: 200px;
 }
 
 nav {
@@ -160,15 +161,27 @@ button.submit:active {
     position: relative;
 }
 
-.all_items .items {
+#all_items .items {
     display: none;
 }
-.all_items .items:target{
-    display: block;
+.items:target{
+    display: table;
     opacity: 1;
     width: 200px;
     height: 200px;
     padding: 50px;
     background: black;
-    z-index: 3;
+}
+
+img.text {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+p{
+    text-align: justify;
+}
+
+#backpack_change.{
+    position: center;
 }
