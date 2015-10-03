@@ -9,7 +9,7 @@ body {
 
 head {
     position: relative;
-    margin-top: 200px;
+    top: 200px;
 }
 
 nav {
@@ -161,17 +161,16 @@ button.submit:active {
     position: relative;
 }
 
-.all_items .items {
+#all_items .items {
     display: none;
 }
-.all_items .items:target{
-    display: block;
+.items:target{
+    display: table;
     opacity: 1;
     width: 200px;
     height: 200px;
     padding: 50px;
     background: black;
-    z-index: 3;
 }
 
 img.text {
@@ -183,6 +182,6 @@ p{
     text-align: justify;
 }
 
-#backpack_change{
+#backpack_change.{
     position: center;
 }
