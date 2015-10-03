@@ -12,14 +12,20 @@ div.container p{
     text-align: justify;
 }
 
+<<<<<<< HEAD
 head {
     position: relative;
-    margin-top: 200px;
+    top: 200px;
+=======
+
+div.container p br {
+    line-height: 200%;
 }
 
 div.container p:first-letter{
     font-size: xx-large;
     vertical-align: bottom;
+>>>>>>> fc3e17613f5a8592cd6777f4f95b2cad1f9254d7
 }
 
 /*---*/
@@ -198,17 +204,111 @@ a .close_items{
     display: none;
 }
 
-.all_items .items {
+<<<<<<< HEAD
+#all_items .items {
+=======
+
+/*4.show box*/
+.items {
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    visibility: hidden;
+>>>>>>> fc3e17613f5a8592cd6777f4f95b2cad1f9254d7
     display: none;
     z-index: 3;
     background-color: rgba(0,0,0,0.5);;
 }
-.all_items .items:target{
-    display: block;
+<<<<<<< HEAD
+.items:target{
+    display: table;
     opacity: 1;
     width: 200px;
     height: 200px;
     padding: 50px;
     background: black;
-    z-index: 3;
 }
+=======
+
+.items > a{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.items:target{
+    visibility: visible;
+    display: block;
+
+}
+
+#item_btn_container {
+    padding: 20px;
+}
+#special_items_btn,#backpack_items_btn {
+    text-decoration: none;
+}
+
+.list-items{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    width: 600px;
+    height: 400px;
+    background: url("/images/items-bg.png");
+    background-size: cover;
+    padding: 5%;
+}
+
+.list-items ul {
+    margin: 80px auto;
+    font-family: Courier, "Lucida Console", monospace;
+    color: darkgreen;
+}
+
+.list-items li {
+    line-height: 64px;
+    font-size: large;
+    margin: 0;
+    padding-left: 60px;
+    list-style: none;
+
+}
+
+li.plw {
+    background: url("/images/plw.jpg") no-repeat left top;
+    background-size: 40px 40px;
+}
+
+li.potion {
+    background: url("/images/potion.png") no-repeat left top;
+    background-size: 40px 40px;
+}
+li.gold {
+    background: url("/images/gold.png") no-repeat left top;
+    background-size: 40px 40px;
+}
+/*************/
+>>>>>>> fc3e17613f5a8592cd6777f4f95b2cad1f9254d7
+
+img.text {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+p{
+    text-align: justify;
+}
+
+<<<<<<< HEAD
+#backpack_change.{
+    position: center;
+}
+=======
+
+>>>>>>> fc3e17613f5a8592cd6777f4f95b2cad1f9254d7

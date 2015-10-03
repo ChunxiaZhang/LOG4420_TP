@@ -2,12 +2,17 @@
  * Created by Zoe on 15-09-16.
  */
 
-
-
+var randomNumber;
 var combatSkill;
 var endurancePoints;
 var goldCrowns;
 
+exports.setRandomNumber = function(e_randomNumber) {
+    this.randomNuber = e_randomNumber;
+}
+exports.getRandomNumber = function() {
+    this.randomNuber;
+}
 exports.setEndurancePoints = function(e_endurancePoints) {
     this.endurancePoints = e_endurancePoints;
 }

@@ -2,24 +2,14 @@
    Created by Zoe on 15-09-17.
 
 
-h1 Wolf's equipments
+h3 Wolf's equipments
 p Weapons
 ul
    each equipment in equipments
       -if(equipment.attri=="weapon")
          li=equipment.equipment_name + " (" + equipment.attri + ")"
-div(class='all_items')
-   a(href="#special_items" id="special_items_btn") Special Items
-   div(id="special_items" class="items")
-      ul
-         each equipment in equipments
-            -if(equipment.attri=="specialItem")
-               li=equipment.equipment_name + " (" + equipment.attri + ")"
 
+div#item_btn_container
+   a(href="#special_items" id="special_items_btn") Special Items
+   p
    a(href="#backpack_items" id="backpack_items_btn") Backpack Items
-   div(id="backpack_items" class="items")
-      ul
-         each equipment in equipments
-            -if(equipment.attri=="backpackItem")
-               li=equipment.equipment_name + " (" + equipment.attri + ")"
-         li=wolf.getGoldCrowns()+ " Gold Crowns"

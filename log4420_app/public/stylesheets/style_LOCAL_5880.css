@@ -5,39 +5,19 @@ body {
     background-color: beige;
     color: #133e40;
     font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
-    margin: 0;
-    padding: 0;
-}
-div.container p{
-    text-align: justify;
 }
 
 head {
     position: relative;
-    margin-top: 200px;
+    top: 200px;
 }
 
-div.container p:first-letter{
-    font-size: xx-large;
-    vertical-align: bottom;
-}
-
-/*---*/
-.header-logo{
-    width: 100%;
-}
-
-/*----------*/
-footer {
-    text-align: center;
-}
-
-/*--------------*/
-
-/*1. menu style********/
 nav {
+     position: fixed;
      background: #FFF;
      border: 1px solid #dedede;
+     border-radius: 4px;
+     box-shadow: 0 2px 2px -1px rgba(0,0,0,0.055);
      color: #888;
      display: block;
      top: 0px;
@@ -87,13 +67,6 @@ nav > ul > li:hover > a {
     color: rgb(255, 255, 255);
 }
 
-.container {
-    margin: 0 auto;
-    max-width: 1024px;
-}
-/*--------------------------*/
-
-/*3.*/
 #flex-container {
     display: -webkit-flex;
     display: flex;
@@ -108,15 +81,6 @@ nav > ul > li:hover > a {
     padding: 20px;
 }
 
-#flex-item-point {
-    width: 60%;
-}
-#adventure {
-    width: 40%;
-}
-/*-------------------*/
-
-/* 2. --*/
 .form-action li {
     list-style-type: none;
     float: left;
@@ -148,12 +112,11 @@ nav > ul > li:hover > a {
 #fieldset_kai {
     margin-bottom: 30px;
 }
-/*-------------------*/
 
 /* Button Style */
-#special_items_btn,#backpack_items_btn, button.submit {
+button.submit {
     position: relative;
-    left: 20px;
+    left: 50px;
     background-color: #68b12f;
     background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
     background: -webkit-linear-gradient(top, #68b12f, #50911e);
@@ -193,22 +156,32 @@ button.submit:active {
     -o-box-shadow: 0 0 10px 5px #356b0b inset;
 
 }
-/*--------------------*/
-a .close_items{
-    display: none;
+
+#all_items{
+    position: relative;
 }
 
-.all_items .items {
+#all_items .items {
     display: none;
-    z-index: 3;
-    background-color: rgba(0,0,0,0.5);;
 }
-.all_items .items:target{
-    display: block;
+.items:target{
+    display: table;
     opacity: 1;
     width: 200px;
     height: 200px;
     padding: 50px;
     background: black;
-    z-index: 3;
+}
+
+img.text {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+p{
+    text-align: justify;
+}
+
+#backpack_change.{
+    position: center;
 }

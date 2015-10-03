@@ -11,5 +11,9 @@ label Blue Stone Disc
 button(class="submit" type="submit") Choose Items
 
 div#decision
+<<<<<<< HEAD
+    p #[a(href="/jeu/331") Turn to 331].
+=======
     p #[a(href="/331") Turn to 331].
+>>>>>>> fc3e17613f5a8592cd6777f4f95b2cad1f9254d7
 
