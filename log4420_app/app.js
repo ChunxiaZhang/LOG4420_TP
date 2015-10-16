@@ -9,7 +9,17 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+//include express-session
+var session = require('express-session');
+
 var app = express(); //let express handle user requests
+
+//make sessions available
+app.use(session({
+  secret:'somesecrettokenhere',
+  resave: false,
+  saveUninitialized: true,
+}));
 
 // view engine setup
 //app.set('views', [path.join(__dirname, 'views/games'), path.join(__dirname, 'views')]);

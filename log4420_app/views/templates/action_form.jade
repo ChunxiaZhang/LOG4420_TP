@@ -2,7 +2,7 @@
    Created by Zoe on 15-09-16.
 
 
-form(name="form-action", class="form-action", method="post")
+form(action="/game/page1", name="form-action", class="form-action", method="post")
    //fieldset
       legend Points
       p Comabt Skill: #{wolf.getCombatSkill()}
@@ -15,42 +15,42 @@ form(name="form-action", class="form-action", method="post")
         p(class='notification') * You have to choose 5 Kai Disciplines
         ul(id="check_disciplines")
             li
-                input(type="checkbox", name="camouflage", checked=false)
+                input(type="checkbox", id="camouflage", name="discipline", checked=false, value='camouflage')
                 label Camouflage
             li
-                input(type="checkbox", name="hunting", checked=false)
+                input(type="checkbox", id="hunting", name="discipline", checked=false, value='hunting')
                 label Hunting
 
             li
-                input(type="checkbox", name="sixthsense", checked=false)
+                input(type="checkbox", id="sixthsense", name="discipline", checked=false, value='sixthsense')
                 label Sixth Sense
 
             li
-                input(type="checkbox", name="tracking", checked=false)
+                input(type="checkbox", id="tracking", name="discipline",  checked=false, value='tracking')
                 label Tracking
 
             li
-                input(type="checkbox", name="healing", checked=false)
+                input(type="checkbox", id="healing", name="discipline",  checked=false, value='healing')
                 label Healing
 
             li
-                input(type="checkbox", name="weaponskill", checked=false)
+                input(type="checkbox", id="weaponskill", name="discipline", checked=false, value='weaponskill')
                 label Weaponskill
 
             li
-                input(type="checkbox", name="mindshield", checked=false)
+                input(type="checkbox", id="mindshield", name="discipline", checked=false, value='mindshield')
                 label Mindshield
 
             li
-                input(type="checkbox", name="mindblast", checked=false)
+                input(type="checkbox", id="mindblast", name="discipline", checked=false, value='mindblast')
                 label Mindblast
 
             li
-                input(type="checkbox", name="animalkinship", checked=false)
+                input(type="checkbox", id="animalkinship", name="discipline", checked=false, value='animalkinship')
                 label Animal Kinship
 
             li
-                input(type="checkbox", name="mindovermatter", checked=false)
+                input(type="checkbox", id="mindovermatter", name="discipline", checked=false, value='mindovermatter')
                 label Mind Over Matter
 
 
@@ -59,46 +59,46 @@ form(name="form-action", class="form-action", method="post")
         p(class='notification') * You have to choose 2 equipments
         ul(id="check_equipments")
             li
-                input(type="checkbox", name="sword", checked=false, class="weapon", id="weapon_sword")
+                input(type="checkbox", name="equipment", checked=false, class="weapon", id="weapon_sword", value="sword")
                 label Sword (Weapons)
             li
-                input(type="checkbox", name="shortsword", checked=false, class="weapon", id="weapon_shortsword")
+                input(type="checkbox", name="equipment", checked=false, class="weapon", id="weapon_shortsword", value="shortsword")
                 label Short Sword (Weapons)
 
             li
-                input(type="checkbox", name="padded", checked=false, class="special_item", id="special_item_padded")
+                input(type="checkbox", name="equipment", checked=false, class="special_item", id="special_item_padded", value="padded")
                 label Padded Leather Waistcoat (Special Items). This adds 2 ENDURANCE points to your total.
 
             li
-                input(type="checkbox", name="spear", checked=false, class="weapon", id="weapon_spear")
+                input(type="checkbox", name="equipment", checked=false, class="weapon", id="weapon_spear", value="spear")
                 label Spear (Weapons)
 
             li
-                input(type="checkbox", name="mace", checked=false, class="weapon", id="weapon_mace")
+                input(type="checkbox", name="equipment", checked=false, class="weapon", id="weapon_mace", value="mace")
                 label Mace (Weapons)
 
             li
-                input(type="checkbox", name="warhammer", checked=false, class="weapon", id="weapon_warhammer")
+                input(type="checkbox", name="equipment", checked=false, class="weapon", id="weapon_warhammer", value="warhammer")
                 label Warhammer (Weapons)
 
             li
-                input(type="checkbox", name="axe", checked=false, class="weapon", id="weapon_axe")
+                input(type="checkbox", name="equipment", checked=false, class="weapon", id="weapon_axe", value="axe")
                 label Axe (Weapons)
 
             li
-                input(type="checkbox", name="potion", checked=false, class="backpack_item", id="backpack_item_potion")
+                input(type="checkbox", name="equipment", checked=false, class="backpack_item", id="backpack_item_potion", value="potion")
                 label Potion of Laumspur (Backpack Items). This restores 4 ENDURANCE points to your total when swallowed after combat. There is only enough for one dose.
 
             li
-                input(type="checkbox", name="quarterstaff", checked=false, class="weapon", id="weapon_quarterstaff")
+                input(type="checkbox", name="equipment", checked=false, class="weapon", id="weapon_quarterstaff", value="quarterstaff")
                 label Quarterstaff (Weapons)
 
             li
-                input(type="checkbox", name="rations", checked=false, class="meal", id="meal_rations")
+                input(type="checkbox", name="equipment", checked=false, class="meal", id="meal_rations", value="rations")
                 label Special Rations (Meals). This counts as one meal.
 
             li
-                input(type="checkbox", name="broadsword", checked=false, class="weapon", id="weapon_broadsword")
+                input(type="checkbox", name="equipment", checked=false, class="weapon", id="weapon_broadsword", value="broadsword")
                 label Broadsword (Weapons)
 
-   button(class="submit" type="submit") Submit Form
+   button(id='submit-kai-equipment' class="submit" type="submit") Submit Form
