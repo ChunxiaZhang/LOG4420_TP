@@ -1,5 +1,6 @@
 extends layout
-
+block head
+  link(rel="stylesheet", href="/stylesheets/creation.css")
 block content
   h1=title
   p=errmsg
@@ -7,6 +8,6 @@ block content
 
   include histories/history_creation
 
-  a(href='/1') Page 1
+  a(href='/page/1') Page 1
 
 

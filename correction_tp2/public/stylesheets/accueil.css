@@ -1,0 +1,19 @@
+#accueil {
+    background-color: #808080;
+}
+
+img {
+    width: 736px;
+    height: 200px;
+    margin: 20px auto 10px;
+    display: block;
+}
+
+section p {
+    margin-bottom: 20px;
+}
+
+.button {
+  line-height: 65px;
+}
+

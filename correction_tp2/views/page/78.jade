@@ -1,0 +1,48 @@
+p Vous vous préparez en hâte et vous sortez de la tente. Le vent s'est intensifié et il emporte la neige poudreuse en petits tourbillons qui réduisent considérablement la visibilité. Une ombre sur votre droite trahit la présence du Bakanal qui bondit sur vous. Vous n'avez plus le temps d'éviter son Assaut, et il vous faut le combattre jusqu'à la mort.
+
+img(src="/images/p78.png" width="193px" height="330px")
+
+section#combat
+    div#monstre
+        span#nomMonstre Bakanal:
+        | HABILETÉ
+        span#monstreAttaque 19
+        | ENDURANCE
+        span#monstreEndurance 30
+
+    div.rondeCombat
+        div
+            | Ronde combat:
+            span 1
+        div
+            p Ratio de combat: 4
+            p Chiffre aléatoire: 3
+        div
+            p Ton ennemi a obtenu #[i 7] dégâts -
+            p et a maintenant #[i 23] points d'endurance.
+        div
+            p Loup Solitaire a eu #[i 3] dégâts -
+            p et a maintenant #[i 23] points d'endurance.
+
+    div.rondeCombat
+        div
+            | Ronde combat:
+            span 2
+        div
+            p Ratio de combat: 6
+            p Chiffre aléatoire: 9
+        div
+            p Ton ennemi a obtenu #[i 16] dégâts -
+            p et a maintenant #[i 27] points d'endurance.
+        div
+            p Loup Solitaire a eu #[i 0] dégâts -
+            p et a maintenant #[i 20] points d'endurance.
+
+    div#choixCombat
+        button#combattre.button  COMBATTRE
+        button#fuir.button FUIR
+
+div#decision
+    img(src="/images/decision.jpg")
+    div
+        p Si vous êtes vainqueur, #[a(href="/jeu/245") rendez-vous au 245].

@@ -1,33 +1,15 @@
 extends layout
+block head
+   link(rel="stylesheet", href="/stylesheets/pageGame.css")
 block content
+   main
+      div#title
+         img(src="/images/pageTitre.png")
+         h1= title
 
-   div
-      img(src="/images/pageTitre.png")
-   h1= title
-
-   section(id="flex-container")
-
-      div#backpack_items.items
-         a(href="#flex-item-point")
-         .list-items
-            ul
-               each equipment in equipments
-                  -if(equipment.attri=="backpackItem")
-                     -if(equipment.equipment_name == "Potion")
-                        li(class="potion")=equipment.equipment_name
-                     li(class="gold")=wolf.getGoldCrowns()+ " Gold Crowns"
-      div#special_items.items
-         a(href="#flex-item-point")
-         .list-items
-            ul
-               each equipment in equipments
-                  -if(equipment.attri=="specialItem")
-                     -if(equipment.equipment_name == "Padded Leather Waistcoat")
-                        li(class="plw")=equipment.equipment_name
-
-      div(class="flex-item" id="flex-item-point")
+      section#histoire
          !{htmlPage}
-      div(class="flex-item" id="adventure")
-         include templates/form_info.jade
+
+      include templates/stats.jade
 
 

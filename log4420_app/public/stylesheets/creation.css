@@ -1,0 +1,33 @@
+/* 2. --*/
+.form-action li {
+    list-style-type: none;
+    float: left;
+    padding: 12px;
+    position: relative;
+}
+
+.form-action input {
+    height:20px;
+    width:40px;
+    padding:5px 8px;
+    float:left;
+}
+
+
+.form-action label {
+    display: inline-block;
+    font-family:"Georgia", "Times", "Times New Roman", serif;
+    width:200px;
+    margin-top: 3px;
+    padding:3px;
+}
+
+.notification {
+    color:#d45252;
+    margin:5px 0 0 0;
+}
+
+#fieldset_kai {
+    margin-bottom: 30px;
+}
+/*-------------------*/

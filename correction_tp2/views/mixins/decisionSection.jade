@@ -1,0 +1,4 @@
+mixin decision(decisions)
+    section#decision
+        each d in decisions
+            p #{d.decisionText + " "} #[a(href="/jeu/p" + d.numPage) #{d.numPage}].

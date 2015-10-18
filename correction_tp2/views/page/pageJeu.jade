@@ -1,0 +1,15 @@
+extends ../layout
+
+block head
+    link(rel="stylesheet", href="/stylesheets/pageJeu.css")
+
+block content
+    main
+        div#title
+            img(src="/images/pageTitre.png")
+            p#numeroPage= numeroPage
+
+        section#histoire
+            !{htmlPage}
+
+        include ./stats.jade

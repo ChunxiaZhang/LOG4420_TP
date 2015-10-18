@@ -1,0 +1,18 @@
+#reglesJeu {
+    background-color: #808080;
+}
+
+img {
+    width: 211px;
+    height: 350px;
+    float: left;
+    margin: 0 40px 20px 0;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+li > ul {
+    margin: 5px 30px 20px;
+}

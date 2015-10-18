@@ -1,0 +1,23 @@
+p Vous cachez le cadavre sous l'escalier et vous vous hâtez de le fouiller. Vous y découvrez une Épée d'Os et un Disque de Pierre Bleue. Si vous souhaitez conserver l'un ou l'autre de ces objets (ou les deux), inscrivez-les sur votre Feuille d'Aventure dans la case Objets Spéciaux.
+
+div#ajouterObjets
+    fieldset
+        legend Choisir le(s) objet(s) à conserver
+        div
+            label
+                input(type="checkbox" id="epeeOs" name="epeeOs")
+                | Épée d'Os
+
+        div
+            label
+                input(type="checkbox" id="disquePierreBleue" name="disquePierreBleue")
+                | Disque de Pierre Bleue
+
+    button.button Ajouter!
+
+p Vous abandonnez ensuite le cadavre et vous montez l'escalier quatre à quatre.
+
+div#decision
+    img(src="/images/decision.jpg")
+    div
+        p #[a(href="/jeu/331") Rendez-vous au 331].
