@@ -84,6 +84,10 @@ var indexCombatRatio = function(ratio) {
 
 //get combat results
 var CombatLogic = function(wolfCombatSkill, enemyComabtSkill) {
+    if(wolfCombatSkill > 20 || wolfCombatSkill <= 0 || enemyComabtSkill > 20 || enemyComabtSkill <=0) {
+        this.err = "Data not valid!";
+        return;
+    }
     this.randomNum = Math.floor(Math.random()*(10 + 1));
 
     //Subtract the COMBAT SKILL of your enemy from this total. This number = Combat Ratio.

@@ -3,11 +3,11 @@ block head
   link(rel="stylesheet", href="/stylesheets/creation.css")
 block content
   h1=title
-  p=errmsg
+  p.error=errmsg
   include templates/action_form
 
   include histories/history_creation
 
-  a(href='/page/1') Page 1
+  a.button(href='/page/1') Page 1
 
 

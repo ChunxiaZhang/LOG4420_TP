@@ -7,7 +7,22 @@ body {
     margin: 0;
     padding: 0;
 }
-div.container p{
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    outline: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+p {
     text-align: justify;
 }
 
@@ -27,12 +42,6 @@ div#flex-item-point p:first-letter{
     width: 100%;
 }
 
-/*----------*/
-footer {
-    text-align: center;
-}
-
-/*--------------*/
 
 /*1. menu style********/
 nav {
@@ -46,10 +55,6 @@ nav {
      overflow: hidden;
  }
 
-ul {
-    margin: 0;
-    padding: 0;
-}
 
 nav li {
     float: left;
@@ -118,9 +123,9 @@ nav > ul > li:hover > a {
 
 
 /* Button Style */
-#special_items_btn,#backpack_items_btn, button.submit {
+.button {
     position: relative;
-    left: 20px;
+    display:block;
     background-color: #68b12f;
     background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
     background: -webkit-linear-gradient(top, #68b12f, #50911e);
@@ -141,17 +146,22 @@ nav > ul > li:hover > a {
     -ms-box-shadow: 0 1px 0 0 #9fd574 inset;
     -o-box-shadow: 0 1px 0 0 #9fd574 inset;
     color: white;
+    height:30px;
+    width:200px;
     font-weight: bold;
     padding: 6px 20px;
-    margin: 20px;
+    text-decoration:none;
+    text-align:center;
+    margin: 20px auto;
+    cursor: pointer;
     text-align: center;
     text-shadow: 0 -1px 0 #396715;
 }
-button.submit:hover {
+.button:hover {
     opacity:.85;
     cursor: pointer;
 }
-button.submit:active {
+.button:active {
     border: 1px solid #20911e;
     box-shadow: 0 0 10px 5px #356b0b inset;
     -webkit-box-shadow:0 0 10px 5px #356b0b inset ;
@@ -247,75 +257,12 @@ img.text {
 }
 /*************/
 
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    outline: none;
-}
+
 
 section {
     width: 600px;
     margin: 50px auto 50px;
 }
-
-section h2 {
-    color: rgb(50, 48, 0);
-    text-align: center;
-    font-size: 1.5em;
-    margin: 30px 0 20px;
-}
-a {
-    cursor: pointer;
-}
-
-p {
-    text-align: justify;
-}
-
-li {
-    text-align: justify;
-    margin-bottom: 10px;
-}
-
-nav {
-    width: 100%;
-    top: 0px;
-    height: 40px;
-    padding-top: 20px;
-    background-color: rgba(1,1,1,0.8);
-    text-align: center;
-    box-shadow: 0 0 15px 0 #000;
-}
-
-nav ul {
-    position: relative;
-    bottom: 20px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    height: 40px;
-}
-
-nav li {
-    display: inline-block;
-    padding: 20px 0;
-}
-
-nav a {
-    height: 40px;
-    color: white;
-    text-decoration: none;
-    padding: 20px 20px;
-}
-
-nav a:hover {
-    color: lightgray;
-}
-
 
 h1 {
     color: rgb(50,48,0);
@@ -324,10 +271,20 @@ h1 {
     margin-bottom: 40px;
 }
 
+section h2 {
+    color: rgb(50, 48, 0);
+    text-align: center;
+    font-size: 1.5em;
+    margin: 30px 0 20px;
+}
+
+
+
+
 /* FOOTER */
 footer {
     width: 100%; /* L'en-tête doit prendre toute la largeur */
-    height: 60px; /* L'en-tête a une taille spécifique */
+    height: 50px; /* L'en-tête a une taille spécifique */
     padding-top: 20px; /* BUG: Sans cette ligne, le haut de la boîte 'body' ne s'affiche pas en haut complètement.*/
     padding-bottom: 10px;
     background-color: rgba(1,1,1,0.8); /* Couleur arrière-plan légèrement transparent */
@@ -344,45 +301,9 @@ footer p {
     margin: 0px;
 }
 
-/* FORME BOUTON */
-.button {
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf)  );
-    background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100%  );
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
-    background-color:#ededed;
-    -webkit-border-top-left-radius:20px;
-    -moz-border-radius-topleft:20px;
-    border-top-left-radius:20px;
-    -webkit-border-top-right-radius:20px;
-    -moz-border-radius-topright:20px;
-    border-top-right-radius:20px;
-    -webkit-border-bottom-right-radius:20px;
-    -moz-border-radius-bottomright:20px;
-    border-bottom-right-radius:20px;
-    -webkit-border-bottom-left-radius:20px;
-    -moz-border-radius-bottomleft:20px;
-    border-bottom-left-radius:20px;
-    text-indent:0;
-    border:3px solid #dcdcdc;
-    display:block;
-    color:#777777;
-    font-family:Arial;
-    font-size:15px;
-    font-weight:bold;
-    font-style:normal;
-    height:65px;
-    width:200px;
-    text-decoration:none;
-    text-align:center;
-    margin: 0px auto;
-    cursor: pointer;
+footer a {
+    text-decoration: none;
 }
 
-.button:hover {
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed)  );
-    background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100%  );
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
-    background-color:#dfdfdf;
-}
 
 

@@ -16,7 +16,7 @@ form(action="/game/page1", name="form-action", class="form-action", method="post
                 label Hunting
 
             li
-                input(type="checkbox", id="sixthsense", name="discipline", checked=false, value='sixthsense')
+                input(type="checkbox", id="sixthsense", name="discipline", checked=false, value='sixthSense')
                 label Sixth Sense
 
             li
@@ -44,7 +44,7 @@ form(action="/game/page1", name="form-action", class="form-action", method="post
                 label Animal Kinship
 
             li
-                input(type="checkbox", id="mindovermatter", name="discipline", checked=false, value='mindovermatter')
+                input(type="checkbox", id="mindovermatter", name="discipline", checked=false, value='mindOverMatter')
                 label Mind Over Matter
 
 
@@ -56,11 +56,11 @@ form(action="/game/page1", name="form-action", class="form-action", method="post
                 input(type="checkbox", name="equipment", checked=false, class="weapon", id="weapon_sword", value="sword")
                 label Sword (Weapons)
             li
-                input(type="checkbox", name="equipment", checked=false, class="weapon", id="weapon_shortsword", value="shortsword")
+                input(type="checkbox", name="equipment", checked=false, class="weapon", id="weapon_shortsword", value="shortSword")
                 label Short Sword (Weapons)
 
             li
-                input(type="checkbox", name="equipment", checked=false, class="special_item", id="special_item_padded", value="padded")
+                input(type="checkbox", name="equipment", checked=false, class="special_item", id="special_item_padded", value="paddedLeatherWaistcoat")
                 label Padded Leather Waistcoat (Special Items). This adds 2 ENDURANCE points to your total.
 
             li
@@ -88,11 +88,10 @@ form(action="/game/page1", name="form-action", class="form-action", method="post
                 label Quarterstaff (Weapons)
 
             li
-                input(type="checkbox", name="equipment", checked=false, class="meal", id="meal_rations", value="rations")
+                input(type="checkbox", name="equipment", checked=false, class="meal", id="meal_rations", value="specialRations")
                 label Special Rations (Meals). This counts as one meal.
 
             li
                 input(type="checkbox", name="equipment", checked=false, class="weapon", id="weapon_broadsword", value="broadsword")
                 label Broadsword (Weapons)
-
-   button(id='submit-kai-equipment' class="submit" type="submit") Submit Form
+       input.button(id='submit-kai-equipment' type="submit" value="Create Game!")

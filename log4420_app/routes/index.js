@@ -31,6 +31,9 @@ router.post("/game/page1", function(req, res){
         var v = 1;
         var page = "./games/page" + v + ".jade";
 
+        player.endurancePoints += player.bonusEndurance(); //add endurance bonus
+        player.combatSkill += player.bonusCombatSkill(); // add combat skill bonus
+
         req.session.player = player; // save player in session
         res.render(page, function(err, html) {
             res.render('page', { title: v, htmlPage: html})
@@ -41,45 +44,42 @@ router.post("/game/page1", function(req, res){
     }
 });
 
-//send player with JSON
+/*
+* a web server for sending player wish JSON
+* */
 router.get("/game/player", function(req, res){
     res.json(req.session.player);
 });
 
-// send /page/:id with JSON
+
+/*
+ * a web server for sending /page/:id with JSON, including every part of page and the information about combat,
+ * and witch pages may access
+ * */
 router.get('/page/:id', function(req, res, next) {
     res.json(pages[req.params.id]);
 });
 
-// return to the 1 part of pages
-router.get('/page/:id/1', function(req, res, next) {
+// return to a part of pages
+router.get('/page/:pageId/:partId', function(req, res, next) {
     // On récupère le paramètre de l'URL
-    var id = req.params.id;
-
+    var pageId = req.params.pageId;
+    var partId = req.params.partId;
     // On crée dynamiquement la page qu'on souhaite charger
-    var page = "./games/page" + id + "_1.jade";
+    var page = "./games/page" + pageId + "_" + partId+ ".jade";
 
     // On veut d'abord convertir la page en HTML, une fois que la conversion
     // est faite, on va injecter le HTML généré vers le fichier page.jade
 
     res.render(page, function(err, html) {
-        res.render('page', { title: id, htmlPage: html})
+        res.render('page', { title: pageId, htmlPage: html})
     });
 
 });
 
-// return to the 2 part of pages
-router.get('/page/:id/2', function(req, res, next) {
-
-    var id = req.params.id;
-    var page = "./games/page" + id + "_2.jade";
-
-    res.render(page, function(err, html) {
-        res.render('page', { htmlPage: html})
-    });
-});
-
-// send the choose according the interval with JSON
+/*
+* a web server used to return the chosen page according the interval by JSON
+* */
 router.get('/choixAleatoire/:pageId', function(req, res) {
     var randomNum = Math.floor(Math.random()*(10 + 1));
     var i = 0;

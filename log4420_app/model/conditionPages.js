@@ -1,6 +1,7 @@
 /**
- * Created by Zoe on 15-10-18.
+ * in some pages, need to calculate witch page the player can go according a random number with the interval condition.
  */
+
 var pages = require("./../model/pages");
 
 //get interval arry from page returning conditions
@@ -31,6 +32,11 @@ module.exports = [ {id: 134,
                     decide: function(randNum) {return calculateDecision(randNum, this.accessPages);}},
 
                     {id: 167,
+                        accessPages: pages["167"].accessPages,
+                        interval: function() {return getInterval(this.accessPages)},
+                        decide: function(randNum) {return calculateDecision(randNum, this.accessPages)}},
+
+                    {id: 331,
                         accessPages: pages["167"].accessPages,
                         interval: function() {return getInterval(this.accessPages)},
                         decide: function(randNum) {return calculateDecision(randNum, this.accessPages)}}

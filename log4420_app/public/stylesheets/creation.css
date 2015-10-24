@@ -1,12 +1,12 @@
-/* 2. --*/
-.form-action li {
+
+li {
     list-style-type: none;
     float: left;
     padding: 12px;
     position: relative;
 }
 
-.form-action input {
+li input {
     height:20px;
     width:40px;
     padding:5px 8px;
@@ -14,7 +14,7 @@
 }
 
 
-.form-action label {
+label {
     display: inline-block;
     font-family:"Georgia", "Times", "Times New Roman", serif;
     width:200px;
@@ -22,12 +22,18 @@
     padding:3px;
 }
 
-.notification {
+p.notification {
     color:#d45252;
     margin:5px 0 0 0;
+}
+
+p.error {
+    color:#d45252;
+    font-size: larger;
+    margin:10px;
 }
 
 #fieldset_kai {
     margin-bottom: 30px;
 }
-/*-------------------*/
+
