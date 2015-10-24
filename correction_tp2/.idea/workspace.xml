@@ -1,73 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="46de7a33-60e0-4b7b-a325-92ef458fe7d0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../log4420_app/public/stylesheets/help.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../log4420_app/model/objects.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page12_3.jade" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page129_2.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page134_2.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page155_2.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page160_2.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page167_2.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page172_2.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page188_2.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page1_2.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page204_2.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page245_2.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page248_2.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page288_2.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page300_2.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page318_2.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page339_2.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page62_2.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page70_2.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page85_2.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page91_2.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../log4420_app/views/templates/help_examples.jade" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/model/Player.js" afterPath="$PROJECT_DIR$/../log4420_app/model/Player.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/templates/action_form.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/templates/action_form.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/model/combatLogic.js" afterPath="$PROJECT_DIR$/../log4420_app/model/combatLogic.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/templates/combat_records.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/templates/combat_records.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/model/conditionPages.js" afterPath="$PROJECT_DIR$/../log4420_app/model/conditionPages.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/public/stylesheets/creation.css" afterPath="$PROJECT_DIR$/../log4420_app/public/stylesheets/creation.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/creation.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/creation.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/help.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/help.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/index.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/index.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/routes/index.js" afterPath="$PROJECT_DIR$/../log4420_app/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/layout.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/layout.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page129_1.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page129_1.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page12_1.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page12_1.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page12_2.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page12_2.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page134_1.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page134_1.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page155_1.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page155_1.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page160_1.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page160_1.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page167_1.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page167_1.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page172_1.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page172_1.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page180_1.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page180_1.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page180_2.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page180_2.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page188_1.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page188_1.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page1_1.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page1_1.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page204_1.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page204_1.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page209_1.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page209_1.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page209_2.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page209_2.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page245_1.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page245_1.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page288_1.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page288_1.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page300_1.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page300_1.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page318_1.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page318_1.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page331_1.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page331_1.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page331_2.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page331_2.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page62_1.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page62_1.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page70_1.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page70_1.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page78_1.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page78_1.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page85_1.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page85_1.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/views/games/page91_1.jade" afterPath="$PROJECT_DIR$/../log4420_app/views/games/page91_1.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/public/stylesheets/pageGame.css" afterPath="$PROJECT_DIR$/../log4420_app/public/stylesheets/pageGame.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/model/pages.js" afterPath="$PROJECT_DIR$/../log4420_app/model/pages.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/../log4420_app/public/stylesheets/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../log4420_app/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../log4420_app/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="46de7a33-60e0-4b7b-a325-92ef458fe7d0" name="Default" comment="" />
     <ignored path="correction_tp2.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -441,7 +375,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="172" y="108" width="1280" height="728" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3301887" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
