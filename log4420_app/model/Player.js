@@ -15,30 +15,6 @@ var constant = function(val) {
 
 var Player = function (disciplinesChosen, equipmentsChosen) {
 
-    // confirm if disciplines are valid
-    if(disciplinesChosen && disciplinesChosen.length === 5) {
-        var i = 0;
-        for(i; i < 5; i++) {
-            if(disciplinesChosen.indexOf(disciplinesChosen[i]) < 0) {
-                throw "Please do not change any element value!";
-            }
-        }
-    } else {
-        throw "Please choose 5 disciplines!";
-    }
-
-    // confirm if equipments are valide
-    if(equipmentsChosen && equipmentsChosen.length === 2) {
-        var i = 0;
-        for(i; i < 2; i++) {
-            if (disciplinesChosen.indexOf(disciplinesChosen[i]) < 0) {
-                throw "Please do not change any element value!";
-            }
-        }
-    } else {
-        throw "Please choose 2 equipments!";
-    }
-
     this.disciplines = disciplinesChosen;
     this.equipments = equipmentsChosen;
 

@@ -18,7 +18,7 @@ module.exports = {
 
     "12" : {
         id : 12,
-        html: ["/page/12/1","/page/12/:2", "/page/12/3"],
+        html: ["/page/12/1","/page/12/2", "/page/12/3"],
         info : null,
         accessPages:[{pageId:180, condition: null}, {pageId:259, condition: null}]
     },

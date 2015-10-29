@@ -6,6 +6,8 @@ var Player = require("./../model/Player");
 var pages = require("./../model/pages");
 var conditionPages = require("./../model/conditionPages");
 var CombatLogic = require("./../model/combatLogic");
+var validation = require("./../middleware/validator");
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -24,24 +26,18 @@ router.get('/help', function(req, res, next) {
 });
 
 // create player object, and save it in session, turn to page1
-router.post("/game/page1", function(req, res){
+router.post("/game/page1", validation.validateChoices(), function(req, res){
+    var page = "./games/page1_1.jade";
+    var player = new Player(req.body.discipline, req.body.equipment);
+    player.endurancePoints += player.bonusEndurance(); //add endurance bonus
+    player.combatSkill += player.bonusCombatSkill(); // add combat skill bonus
 
-    try {
-        var player = new Player(req.body.discipline, req.body.equipment);
-        var v = 1;
-        var page = "./games/page" + v + ".jade";
+    req.session.player = player; // save player in session
 
-        player.endurancePoints += player.bonusEndurance(); //add endurance bonus
-        player.combatSkill += player.bonusCombatSkill(); // add combat skill bonus
+    res.render(page, function(err, html) {
+        res.render('page', { title: 1, htmlPage: html})
+    });
 
-        req.session.player = player; // save player in session
-        res.render(page, function(err, html) {
-            res.render('page', { title: v, htmlPage: html})
-        });
-
-    } catch (err) {
-        res.render('creation', {title: "Create character", errmsg:err});
-    }
 });
 
 /*
