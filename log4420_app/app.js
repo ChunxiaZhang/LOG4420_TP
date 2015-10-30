@@ -12,6 +12,8 @@ var users = require('./routes/users');
 //include express-session
 var session = require('express-session');
 
+
+
 var app = express(); //let express handle user requests
 
 //make sessions available

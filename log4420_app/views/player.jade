@@ -1,0 +1,20 @@
+extends layout
+block head
+   link(rel="stylesheet", href="/stylesheets/player.css")
+block content
+   h1= title
+
+   if player[0]
+      div
+         br
+         p Player ID: #{player[0]._id}
+         p Initial random number: #{player[0].initNum}
+         p Combat Skill: #{player[0].combatSkill}
+         p Endurance: #{player[0].endurancePoints}
+         p Gold Crowns: #{player[0].goldCrowns}
+         p Disciplines: #{player[0].disciplines}
+         p Equipments: #{player[0].equipments}
+
+   else
+      p Didn't find this player.
+

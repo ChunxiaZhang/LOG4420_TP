@@ -1,12 +1,17 @@
 var express = require('express');
 var session = require('express-session');
 
+
 var router = express.Router();
 var Player = require("./../model/Player");
 var pages = require("./../model/pages");
 var conditionPages = require("./../model/conditionPages");
 var CombatLogic = require("./../model/combatLogic");
 var validation = require("./../middleware/validator");
+
+var dbInteraction = require("./../db/interaction");
+
+dbInteraction.connectDb();
 
 
 /* GET home page. */
@@ -32,7 +37,11 @@ router.post("/game/page1", validation.validateChoices(), function(req, res){
     player.endurancePoints += player.bonusEndurance(); //add endurance bonus
     player.combatSkill += player.bonusCombatSkill(); // add combat skill bonus
 
-    req.session.player = player; // save player in session
+    req.player = player;
+
+    dbInteraction.insertPlayer(req, res, function(){
+        console.log("insert a player");
+    });
 
     res.render(page, function(err, html) {
         res.render('page', { title: 1, htmlPage: html})
@@ -40,11 +49,20 @@ router.post("/game/page1", validation.validateChoices(), function(req, res){
 
 });
 
+router.get("/game/players", function(req, res){
+    dbInteraction.getAllPlayers(req, res, function(docs){
+        res.render('players', {title: 'Players', players: docs});
+    });
+});
+
 /*
-* a web server for sending player wish JSON
+* a web server for finding a player
 * */
-router.get("/game/player", function(req, res){
-    res.json(req.session.player);
+router.get("/game/:playerId", function(req, res){
+    dbInteraction.getPlayer(req, res, function(docs){
+        res.render('player', {title: 'Player', player: docs});
+    });
+
 });
 
 

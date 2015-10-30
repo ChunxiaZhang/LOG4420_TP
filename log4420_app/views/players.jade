@@ -1,0 +1,22 @@
+extends layout
+block content
+   h1= title
+   p List of players
+   if players
+      ul
+         each player in players
+            li
+               div
+                  br
+                  p Player ID: #{player._id}
+                  p Initial random number: #{player.initNum}
+                  p Combat Skill: #{player.combatSkill}
+                  p Endurance: #{player.endurancePoints}
+                  p Gold Crowns: #{player.goldCrowns}
+                  p Disciplines: #{player.disciplines}
+                  p Equipments: #{player.equipments}
+
+
+   else
+      p There is no player.
+
