@@ -14,10 +14,10 @@ var constant = function(val) {
 
 
 var Player = function (disciplinesChosen, equipmentsChosen) {
-
+    var now = new Date();
+    this.createTime = now.toUTCString();
     this.disciplines = disciplinesChosen;
     this.equipments = equipmentsChosen;
-
     this.RANDOMNUM = constant(Math.floor(Math.random()*(10 + 1)))(); //the initial random number should be unchangeable
     this.name = "wolf";
     this.combatSkill = 10 + this.RANDOMNUM;

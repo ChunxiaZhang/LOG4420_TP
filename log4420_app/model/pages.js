@@ -1,12 +1,4 @@
-/**
- * Created by Zoe on 15-10-17.
- */
 
-var isLostEndurance = function (previous, now) {
-    return previous-now > 0;
-};
-
-var tr
 
 module.exports = {
     "1" : {

@@ -9,10 +9,10 @@ var conditionPages = require("./../model/conditionPages");
 var CombatLogic = require("./../model/combatLogic");
 var validation = require("./../middleware/validator");
 
-var dbInteraction = require("./../db/interaction");
+var dbPlayers = require("./../db/players");
+var dbRecords = require("./../db/records");
 
-dbInteraction.connectDb();
-
+var currentPlayerId = "";
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -26,7 +26,7 @@ router.get('/creation', function(req, res) {
 });
 
 /* GET help.*/
-router.get('/help', function(req, res, next) {
+router.get('/help', function(req, res) {
     res.render('help', {title: "Game rules"});
 });
 
@@ -39,19 +39,28 @@ router.post("/game/page1", validation.validateChoices(), function(req, res){
 
     req.player = player;
 
-    dbInteraction.insertPlayer(req, res, function(){
-        console.log("insert a player");
+
+    dbPlayers.insertPlayer(req, res, function(docs){
+
+        currentPlayerId = docs["ops"][0]["_id"];
+        
+        //insert record to db
+        dbRecords.insertRecord(currentPlayerId.toString(), 1, function(){
+
+        });
     });
 
+
     res.render(page, function(err, html) {
+
         res.render('page', { title: 1, htmlPage: html})
     });
 
 });
 
 router.get("/game/players", function(req, res){
-    dbInteraction.getAllPlayers(req, res, function(docs){
-        res.render('players', {title: 'Players', players: docs});
+    dbPlayers.getAllPlayers(req, res, function(docs){
+        res.json(docs);
     });
 });
 
@@ -59,33 +68,56 @@ router.get("/game/players", function(req, res){
 * a web server for finding a player
 * */
 router.get("/game/:playerId", function(req, res){
-    dbInteraction.getPlayer(req, res, function(docs){
-        res.render('player', {title: 'Player', player: docs});
+    dbPlayers.getPlayer(req, res, function(docs){
+        res.json(docs);
     });
 
 });
 
+router.put("/game/update/:playerId", function(req, res){
+    dbPlayers.updatePlayer(req, res, function(){
+        res.json();
+    });
+});
+
+router.delete("/game/delete/:playerId", function(req, res){
+    dbPlayers.removePlayer(req, res, function(){
+        res.json();
+    });
+});
+
+/*
+*  Continue game
+* */
+router.get('/game/continue', function(req, res) {
+   /* dbRecords.(req, res, function(docs){
+        res.json(docs);
+    });
+    res.json(pages[req.params.id]);*/
+
+});
 
 /*
  * a web server for sending /page/:id with JSON, including every part of page and the information about combat,
  * and witch pages may access
  * */
-router.get('/page/:id', function(req, res, next) {
+router.get('/page/:id', function(req, res) {
     res.json(pages[req.params.id]);
 });
 
 // return to a part of pages
 router.get('/page/:pageId/:partId', function(req, res, next) {
-    // On récupère le paramètre de l'URL
     var pageId = req.params.pageId;
     var partId = req.params.partId;
-    // On crée dynamiquement la page qu'on souhaite charger
+
     var page = "./games/page" + pageId + "_" + partId+ ".jade";
 
-    // On veut d'abord convertir la page en HTML, une fois que la conversion
-    // est faite, on va injecter le HTML généré vers le fichier page.jade
-
     res.render(page, function(err, html) {
+        //insert record to db
+        dbRecords.insertRecord(currentPlayerId.toString(), pageId, function(){
+
+        });
+
         res.render('page', { title: pageId, htmlPage: html})
     });
 

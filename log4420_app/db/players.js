@@ -4,19 +4,11 @@ var ObjectId = require('mongodb').ObjectID;
 var url = 'mongodb://administrator:123456@ds045464.mongolab.com:45464/lonewolf';
 
 
-// mongodb
-exports.connectDb = function(req,res,callback) {
-    MongoClient.connect(url, function (err, db) {
-        assert.equal(null, err);
-        console.log("Connected correctly to mongodb server.");
-        db.close();
-    });
-};
-
 exports.insertPlayer = function(req,res,callback) {
     MongoClient.connect(url, function (err, db){
         if (err) return;
         db.collection('players').insertOne({
+                createTime: req.player.createTime,
                 initNum: req.player.RANDOMNUM,
                 combatSkill: req.player.combatSkill,
                 endurancePoints: req.player.endurancePoints,
@@ -24,9 +16,9 @@ exports.insertPlayer = function(req,res,callback) {
                 disciplines: req.player.disciplines,
                 equipments: req.player.equipments
             },
-            function() {
+            function(err, docs) {
                 db.close();
-                callback();});
+                callback(docs);});
     });
 };
 
@@ -52,3 +44,25 @@ exports.getPlayer = function(req,res,callback) {
     });
 };
 
+
+exports.updatePlayer = function(req, res, callback) {
+    MongoClient.connect(url, function (err, db){
+        if (err) return;
+        db.collection('players').updateOne({_id: ObjectId(req.params.playerId)}, {
+            $set:{"initNum": req.body.initNum, "combatSkill": req.body.combatSkill,
+            "goldCrowns": req.body.goldCrowns, "endurancePoints": req.body.endurancePoints,
+            "disciplines": req.body.disciplines, "equipments": req.body.equipments}
+        }, function(err){
+            db.close();
+            callback();
+        });
+    });
+};
+
+exports.removePlayer = function(req,res,callback){
+    MongoClient.connect(url, function (err, db){
+        db.collection('players').deleteOne({_id: ObjectId(req.params.playerId)}, function(){
+            db.close();
+            callback();});
+    });
+};
