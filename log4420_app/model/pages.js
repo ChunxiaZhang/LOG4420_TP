@@ -80,7 +80,7 @@ module.exports = {
 
     "160" : {
         id : 160,
-        html: ["/page/:160/:1"],
+        html: ["/page/160/1"],
         info : null,
         accessPages:[{pageId:204, condition: [{type: "discipline", con:"Hunting", isOwn: true}]}, {pageId:318, condition: [{type: "discipline", con:"Animal Kinship", isOwn: true}]}, {pageId:78, condition: [{type: "discipline", con:"Hunting", isOwn: false}, {type: "discipline", con:"Animal Kinship", isOwn: false}]}]
     },

@@ -3,6 +3,7 @@
 * To valid the disciplines and equipments chosen
 * */
 exports.validateChoices = function() {
+
     return function (req, res, next) {
         var isValid = true;
         var err = " ";

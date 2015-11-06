@@ -2,9 +2,12 @@
    Created by Zoe on 15-09-16.
 
 
-form(action="/game/page1", name="form-action", class="form-action", method="post")
+form(action="/game/page1" name="form-action" class="form-action" method="post")
 
-   fieldset(id="fieldset_kai")
+    fieldset
+        legend Create player name
+        input(type="text", id="playerNameId", name="playerName")
+    fieldset(id="fieldset_kai")
         legend Choose five Kai Disciplines
         p(class='notification') * You have to choose 5 Kai Disciplines
         ul(id="check_disciplines")
@@ -48,7 +51,7 @@ form(action="/game/page1", name="form-action", class="form-action", method="post
                 label Mind Over Matter
 
 
-   fieldset
+    fieldset
         legend Choose two equipments
         p(class='notification') * You have to choose 2 equipments
         ul(id="check_equipments")
@@ -94,4 +97,4 @@ form(action="/game/page1", name="form-action", class="form-action", method="post
             li
                 input(type="checkbox", name="equipment", checked=false, class="weapon", id="weapon_broadsword", value="broadsword")
                 label Broadsword (Weapons)
-       input.button(id='submit-kai-equipment' type="submit" value="Create Game!")
+    input.button(id='submit-kai-equipment' type="submit" value="Create Game!")
