@@ -31,7 +31,8 @@ exports.updateRecord = function(req, res, callback) {
     MongoClient.connect(url, function (err, db){
         if (err) return;
         db.collection(req.params.playerId).updateOne({_id: ObjectId(req.params.recordId)}, {
-            $set:{"id":req.body.id}
+            $set:{"id":req.body.id, "html": req.body.htmls, "info": req.body.info,
+            "accessPages": req.body.accessPages}
         }, function(err){
             db.close();
             callback();
