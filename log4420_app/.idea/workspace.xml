@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c6346dd8-4329-4536-9734-adab274b7e88" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/createPlayer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/game.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/webservice.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/players.js" afterPath="$PROJECT_DIR$/db/players.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/records.js" afterPath="$PROJECT_DIR$/db/records.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/pages.js" afterPath="$PROJECT_DIR$/model/pages.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/games/page78_1.jade" afterPath="$PROJECT_DIR$/views/games/page78_1.jade" />
-    </list>
+    <list default="true" id="c6346dd8-4329-4536-9734-adab274b7e88" name="Default" comment="" />
     <ignored path="log4420_app.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
