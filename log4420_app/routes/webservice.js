@@ -42,6 +42,7 @@ router.put("/game/update/:playerId", function(req, res){
  * */
 router.delete("/game/delete/:playerId", function(req, res){
     dbPlayers.removePlayer(req, res, function(){
+        dbRecords.dropRecords(req, res, function() {});
         res.json();
     });
 });

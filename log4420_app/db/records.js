@@ -8,11 +8,13 @@ exports.insertRecord = function(playerId,pageId,callback) {
     MongoClient.connect(url, function (err, db){
         if (err) return;
         if(!playerId.trim()) return;
-        console.log(pages[pageId]);
-        db.collection(playerId).insertOne(pages[pageId],
-            function() {
-                db.close();
-                callback();});
+        if(pages[pageId]) {
+            db.collection(playerId).insertOne(pages[pageId],
+                function () {
+                    db.close();
+                    callback();
+                });
+        }
     });
 };
 
@@ -43,6 +45,16 @@ exports.updateRecord = function(req, res, callback) {
 exports.removeRecord = function(req,res,callback){
     MongoClient.connect(url, function (err, db){
         db.collection(req.params.playerId).deleteOne({_id: ObjectId(req.params.recordId)}, function(){
+            db.close();
+            callback();});
+    });
+};
+
+//remove one collection
+exports.dropRecords = function(req,res,callback){
+    MongoClient.connect(url, function (err, db){
+        db.collection(req.params.playerId).drop(function(err, response){
+            console.log(response);
             db.close();
             callback();});
     });
