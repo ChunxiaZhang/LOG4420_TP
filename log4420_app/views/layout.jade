@@ -1,9 +1,9 @@
 doctype html
-html
+html(ng-app="gameApp")
     head
         title= title
         link(rel='stylesheet', href='/stylesheets/style.css')
-        link(rel='stylesheet', href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css")
+        link(rel='stylesheet', href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css")
         block head
     body
         header
@@ -12,6 +12,11 @@ html
         div(class="container")
             block content
 
+    script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js")
+    script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js")
+    script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-messages.js")
+    script(src="./../app/app.js")
+    script(src="./../controllers/formControllers.js")
     aside
         figure
             a(href='http://www.projectaon.org/en/Main/Home')

@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 
 /* GET Game Creation page.*/
 router.get('/creation', function(req, res) {
-    res.render('creation', {title: "Create character"});
+    res.render('creation', {title: "Set up Game"});
 
 });
 

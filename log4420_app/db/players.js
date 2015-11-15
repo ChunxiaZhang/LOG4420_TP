@@ -1,3 +1,16 @@
+/*var mongooose = require('mongoose');
+var mongoConfig = require('../config/mongoConfig');
+
+mongooose.connect(mongoConfig.url);
+
+var db = mongooose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function(callback){
+    console.log("yep!");
+});
+*/
+
+
 var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 var ObjectId = require('mongodb').ObjectID;
@@ -18,7 +31,6 @@ exports.getAllPlayers = function(req,res,callback) {
     MongoClient.connect(url, function (err, db){
         if (err) return;
         db.collection('players').find().toArray(function(err,docs){
-            console.log(docs);
             db.close();
             callback(docs);
         });

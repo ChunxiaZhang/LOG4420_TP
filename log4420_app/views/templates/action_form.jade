@@ -2,99 +2,33 @@
    Created by Zoe on 15-09-16.
 
 
-form(action="/game/page1" name="form-action" class="form-action" method="post")
+form(action="/game/page1", name="formAction", class="form-action", method="post", ng-controller="formController", novalidate=)
 
     fieldset
-        legend Create player name
-        input(type="text", id="playerNameId", name="playerName")
+        legend Player name
+        input(type="text", id="playerNameInput", name="playerName", ng-model="newPlayerName", ng-minlength='3', ng-maxlength='50' required)
+        div( ng-messages="formAction.playerName.$dirty && formAction.playerName.$error")
+            div(ng-message="required") This field is required!
+            div(ng-message="minlength") You need to enter more than 3 characters!
+            div(ng-message="maxlength") You can't enter more than 50 characters!
+
     fieldset(id="fieldset_kai")
         legend Choose five Kai Disciplines
-        p(class='notification') * You have to choose 5 Kai Disciplines
-        ul(id="check_disciplines")
-            li
-                input(type="checkbox", id="camouflage", name="discipline", checked=false, value='camouflage')
-                label Camouflage
-            li
-                input(type="checkbox", id="hunting", name="discipline", checked=false, value='hunting')
-                label Hunting
-
-            li
-                input(type="checkbox", id="sixthsense", name="discipline", checked=false, value='sixthSense')
-                label Sixth Sense
-
-            li
-                input(type="checkbox", id="tracking", name="discipline",  checked=false, value='tracking')
-                label Tracking
-
-            li
-                input(type="checkbox", id="healing", name="discipline",  checked=false, value='healing')
-                label Healing
-
-            li
-                input(type="checkbox", id="weaponskill", name="discipline", checked=false, value='weaponskill')
-                label Weaponskill
-
-            li
-                input(type="checkbox", id="mindshield", name="discipline", checked=false, value='mindshield')
-                label Mindshield
-
-            li
-                input(type="checkbox", id="mindblast", name="discipline", checked=false, value='mindblast')
-                label Mindblast
-
-            li
-                input(type="checkbox", id="animalkinship", name="discipline", checked=false, value='animalkinship')
-                label Animal Kinship
-
-            li
-                input(type="checkbox", id="mindovermatter", name="discipline", checked=false, value='mindOverMatter')
-                label Mind Over Matter
+        div(ng-if="checkDiscDisable" class='notification') You can't choose more than 5 disciplines. Please uncheck others to choose this one.
+        div(ng-show="formAction.disciplinesCheck.$error.checkedNum") Need to select 5 items
+        ul(id="check_disciplines", name="discGroup", ng-model="checkedNum")
+            li(ng-repeat="disc in disciplinesScope")
+                input(type="checkbox", name="disciplinesCheck", id="{{disc.id}}", value="{{disc.value}}", ng-model="disc.checked", ng-change="changeDiscStatus($index)", ng-disabled="!disc.checked && numCheckedDisc>5")
+                label {{disc.name}}
 
 
     fieldset
         legend Choose two equipments
-        p(class='notification') * You have to choose 2 equipments
+        div(ng-if="checkEquipDisable" class='notification') You can't choose more than 2 equipments. Please uncheck others to choose this one.
+
         ul(id="check_equipments")
-            li
-                input(type="checkbox", name="equipment", checked=false, class="weapon", id="weapon_sword", value="sword")
-                label Sword (Weapons)
-            li
-                input(type="checkbox", name="equipment", checked=false, class="weapon", id="weapon_shortsword", value="shortSword")
-                label Short Sword (Weapons)
+            li(ng-repeat="equip in equipmentsScope")
+                input(type="checkbox", id="{{equip.id}}",value="{{equip.value}}", ng-model="equip.checked", ng-change="changeEquipStatus($index)", ng-disabled="!equip.checked && numCheckedEquip>2")
+                label {{equip.name}}
 
-            li
-                input(type="checkbox", name="equipment", checked=false, class="special_item", id="special_item_padded", value="paddedLeatherWaistcoat")
-                label Padded Leather Waistcoat (Special Items). This adds 2 ENDURANCE points to your total.
-
-            li
-                input(type="checkbox", name="equipment", checked=false, class="weapon", id="weapon_spear", value="spear")
-                label Spear (Weapons)
-
-            li
-                input(type="checkbox", name="equipment", checked=false, class="weapon", id="weapon_mace", value="mace")
-                label Mace (Weapons)
-
-            li
-                input(type="checkbox", name="equipment", checked=false, class="weapon", id="weapon_warhammer", value="warhammer")
-                label Warhammer (Weapons)
-
-            li
-                input(type="checkbox", name="equipment", checked=false, class="weapon", id="weapon_axe", value="axe")
-                label Axe (Weapons)
-
-            li
-                input(type="checkbox", name="equipment", checked=false, class="backpack_item", id="backpack_item_potion", value="potion")
-                label Potion of Laumspur (Backpack Items). This restores 4 ENDURANCE points to your total when swallowed after combat. There is only enough for one dose.
-
-            li
-                input(type="checkbox", name="equipment", checked=false, class="weapon", id="weapon_quarterstaff", value="quarterstaff")
-                label Quarterstaff (Weapons)
-
-            li
-                input(type="checkbox", name="equipment", checked=false, class="meal", id="meal_rations", value="specialRations")
-                label Special Rations (Meals). This counts as one meal.
-
-            li
-                input(type="checkbox", name="equipment", checked=false, class="weapon", id="weapon_broadsword", value="broadsword")
-                label Broadsword (Weapons)
     input.button(id='submit-kai-equipment' type="submit" value="Create Game!")

@@ -9,6 +9,7 @@ exports.insertRecord = function(playerId,pageId,callback) {
         if (err) return;
         if(!playerId.trim()) return;
         if(pages[pageId]) {
+            pages[pageId].playerId = playerId;
             db.collection(playerId).insertOne(pages[pageId],
                 function () {
                     db.close();

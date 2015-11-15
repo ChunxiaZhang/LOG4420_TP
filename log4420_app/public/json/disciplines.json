@@ -1,0 +1,62 @@
+[
+  {
+    "id": "discipline_1",
+    "value": "camouflage",
+    "name": "Camouflage",
+    "checked": false
+  },
+  {
+    "id": "discipline_2",
+    "value": "hunting",
+    "name": "Hunting",
+    "checked": false
+  },
+  {
+    "id": "discipline_3",
+    "value": "sixthSense",
+    "name": "Sixth Sense",
+    "checked": false
+  },
+  {
+    "id": "discipline_4",
+    "value": "tracking",
+    "name": "Tracking",
+    "checked": false
+  },
+  {
+    "id": "discipline_5",
+    "value": "healing",
+    "name": "Healing",
+    "checked": false
+  },
+  {
+    "id": "discipline_6",
+    "value": "weaponskill",
+    "name": "Weaponskill",
+    "checked": false
+  },
+  {
+    "id": "discipline_7",
+    "value": "mindshield",
+    "name": "Mindshield",
+    "checked": false
+  },
+  {
+    "id": "discipline_8",
+    "value": "mindblast",
+    "name": "Mindblast",
+    "checked": false
+  },
+  {
+    "id": "discipline_9",
+    "value": "animalkinship",
+    "name": "Animal Kinship",
+    "checked": false
+  },
+  {
+    "id": "discipline_10",
+    "value": "mindOverMatter",
+    "name": "Mind Over Matter",
+    "checked": false
+  }
+]

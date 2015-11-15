@@ -53,7 +53,8 @@ router.delete("/game/delete/:playerId", function(req, res){
  * */
 router.get('/game/record/:playerId', function(req, res) {
     dbRecords.getPlayerRecord(req, res, function(docs){
-        res.json(docs);
+        console.log("record: " + docs[0].id);
+        res.json(docs[0]);
     });
 });
 

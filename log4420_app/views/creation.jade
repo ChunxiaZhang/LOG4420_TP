@@ -3,6 +3,20 @@ block head
   link(rel="stylesheet", href="/stylesheets/creation.css")
 block content
   h1=title
+  div(ng-controller="playersListCtrl")
+    p Choose one player to continue game
+    table
+      tr
+        th Name
+        th ID
+      tr(ng-repeat="player in dbPlayers")
+        td
+           a(href="#" ng-click="restart(player._id)") {{player.name}}
+        td
+           a(href="#" ng-click="restart(player._id)") {{player._id}}
+        td
+           a(href="#" ng-click="deletePlayer(player._id)")
+             img(src="/images/delete.png", width="20px", height="20px")
   p.error=errmsg
   include templates/action_form
 

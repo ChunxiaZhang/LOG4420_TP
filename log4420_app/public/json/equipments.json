@@ -1,0 +1,86 @@
+[
+  {
+    "id": "equipment_1",
+    "value": "sword",
+    "name": "Sword (Weapons)",
+    "type": "weapon",
+    "checked": false
+  },
+  {
+    "id": "equipment_2",
+    "value": "shortSword",
+    "name": "Short Sword (Weapons)",
+    "type": "weapon",
+    "checked": false
+  },
+  {
+    "id": "equipment_3",
+    "value": "paddedLeatherWaistcoat",
+    "name": "Padded Leather Waistcoat (Special Items). This adds 2 ENDURANCE points to your total",
+    "type": "special_item",
+    "checked": false
+  },
+  {
+    "id": "equipment_4",
+    "value": "spear",
+    "name": "Spear (Weapons)",
+    "type": "weapon",
+    "checked": false
+  },
+  {
+    "id": "equipment_5",
+    "value": "mace",
+    "name": "Mace (Weapons)",
+    "type": "weapon",
+    "checked": false
+  },
+  {
+    "id": "equipment_6",
+    "value": "warhammer",
+    "name": "Warhammer (Weapons)",
+    "type": "weapon",
+    "checked": false
+  },
+  {
+    "id": "equipment_7",
+    "value": "axe",
+    "name": "Axe (Weapons)",
+    "type": "weapon",
+    "checked": false
+  },
+  {
+    "id": "equipment_8",
+    "value": "potion",
+    "name": "Potion of Laumspur (Backpack Items). This restores 4 ENDURANCE points to your total when swallowed after combat. There is only enough for one dose.",
+    "type": "backpack_item",
+    "checked": false
+  },
+  {
+    "id": "equipment_9",
+    "value": "quarterstaff",
+    "name": "Quarterstaff (Weapons)",
+    "type": "weapon",
+    "checked": false
+  },
+  {
+    "id": "equipment_10",
+    "value": "quarterstaff",
+    "name": "Quarterstaff (Weapons)",
+    "type": "weapon",
+    "checked": false
+  },
+  {
+    "id": "equipment_11",
+    "value": "specialRations",
+    "name": "Special Rations (Meals). This counts as one meal.",
+    "type": "meal",
+    "checked": false
+  },
+  {
+    "id": "equipment_12",
+    "value": "broadsword",
+    "name": "Broadsword (Weapons)",
+    "type": "weapon",
+    "checked": false
+  }
+]

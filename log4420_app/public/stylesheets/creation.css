@@ -1,3 +1,10 @@
+#playerNameInput.ng-invalid.ng-dirty {
+    border: 1px red solid;
+}
+
+#playerNameInput {
+    border: 1px darkgrey solid;
+}
 
 li {
     list-style-type: none;
