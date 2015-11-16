@@ -1,19 +1,9 @@
 extends layout
 
 block content
-  h1= title
-  div(ng-controller="formControllers")
-     input(type="text", ng-model="playerName")
-     h1 {{playerName}}
+    h1= title
 
-  div(ng-controller="playersListCtrl")
-      ul
-          li(ng-repeat="dbPlayer in dbPlayers" dbPlayer="dbPlayer") id: {{dbPlayer._id}}  name: {{dbPlayer.name}}
-      p Records List
-      ul
-          li(ng-repeat="dbRecord in dbRecords" dbRecord="dbRecord") {{dbRecord.id}} list {{dbRecord.record}}
-  include histories/history_introduction
+    include histories/history_introduction
 
-  a.button(href='/creation') Start Game
-
+    a.button(href='/creation') Start Game
 

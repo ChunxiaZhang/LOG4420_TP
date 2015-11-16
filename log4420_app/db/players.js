@@ -19,7 +19,10 @@ var url = 'mongodb://administrator:123456@ds045464.mongolab.com:45464/lonewolf';
 
 exports.insertPlayer = function(req,res,callback) {
     MongoClient.connect(url, function (err, db){
-        if (err) return;
+        if (err) {
+            console.log(err.message);
+            return;
+        }
         db.collection('players').insertOne( req.player,
             function(err, docs) {
                 db.close();

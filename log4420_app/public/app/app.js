@@ -3,73 +3,18 @@
  */
 
 
-var gameApp = angular.module('gameApp', ['ngMessages'
+var gameApp = angular.module('gameApp', ['ngMessages', 'ngRoute',
+    'formController'
 ]);
-gameApp.controller('formController', function($scope, factoryProperties){
-    $scope.checkedNum = "";
-    $scope.newPlayerName = "";
-    factoryProperties.disciplinesList(function(disciplines){
-        $scope.disciplinesScope = disciplines;
+gameApp.config(function($routeProvider){
+    $routeProvider.
+        when('/', {
+        templateUrl: 'views/test.html',
+        controller: 'formController'
     });
-    factoryProperties.equipmentsList(function(equipments){
-        $scope.equipmentsScope = equipments;
-    });
-
-    $scope.getCheckedDiscNum = function() {
-        var num = 0;
-        var length = $scope.disciplinesScope.length;
-        var i = 0;
-        for(i; i < length; i++){
-            if ($scope.disciplinesScope[i].checked) {
-                num += 1;
-            }
-        }
-        return num;
-    }
-
-    $scope.changeDiscStatus = function(index){
-        var num = $scope.getCheckedDiscNum();
-        console.log("num: " + num);
-        $scope.checkDiscDisable = false;
-        if (num > 5) {
-            $scope.checkDiscDisable = true;
-            $scope.disciplinesScope[index].checked = false;
-        }
-
-
-        $scope.numCheckedDisc = $scope.getCheckedDiscNum();
-        console.log("$scope.numCheckedDisc: " + $scope.numCheckedDisc);
-        $scope.formAction.disciplinesCheck.$setValidity("checkedNum", true);
-        if ($scope.numCheckedDisc != 5) {
-            $scope.formAction.disciplinesCheck.$setValidity("checkedNum", false);
-        }
-    };
-
-    $scope.getCheckedEquipNum = function() {
-        var num = 0;
-        var length = $scope.equipmentsScope.length;
-        var i = 0;
-        for(i; i < length; i++){
-            if ($scope.equipmentsScope[i].checked) {
-                num += 1;
-            }
-        }
-        return num;
-    }
-
-    $scope.changeEquipStatus = function(index){
-        $scope.checkEquipDisable = false;
-        if ($scope.equipmentsScope[index].checked) {
-            var num = $scope.getCheckedEquipNum();
-            if (num > 2) {
-                $scope.checkEquipDisable = true;
-                $scope.equipmentsScope[index].checked = false;
-            }
-        }
-        $scope.numCheckedEquip = $scope.getCheckedEquipNum();
-
-    };
 });
+
+
 
 gameApp.factory('factoryProperties', function($http){
     return {

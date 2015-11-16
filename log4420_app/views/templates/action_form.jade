@@ -2,33 +2,35 @@
    Created by Zoe on 15-09-16.
 
 
-form(action="/game/page1", name="formAction", class="form-action", method="post", ng-controller="formController", novalidate=)
+form(name="formAction", class="form-action", ng-submit="submitForm(formAction.playerName.$valid)", ng-controller="formController", novalidate)
 
     fieldset
         legend Player name
         input(type="text", id="playerNameInput", name="playerName", ng-model="newPlayerName", ng-minlength='3', ng-maxlength='50' required)
-        div( ng-messages="formAction.playerName.$dirty && formAction.playerName.$error")
-            div(ng-message="required") This field is required!
+        div(ng-messages="formAction.playerName.$dirty && formAction.playerName.$error")
+            div(ng-show="notfilled" ng-message="required") This field is required!
             div(ng-message="minlength") You need to enter more than 3 characters!
             div(ng-message="maxlength") You can't enter more than 50 characters!
 
     fieldset(id="fieldset_kai")
         legend Choose five Kai Disciplines
-        div(ng-if="checkDiscDisable" class='notification') You can't choose more than 5 disciplines. Please uncheck others to choose this one.
-        div(ng-show="formAction.disciplinesCheck.$error.checkedNum") Need to select 5 items
-        ul(id="check_disciplines", name="discGroup", ng-model="checkedNum")
+        div(ng-if="formValidator.isMoreThan5" class='notification') You can't choose more than 5 disciplines. Please uncheck others to choose this one.
+        div(ng-show="!formValidator.isDiscCheckedValid") Need to select 5 items
+        ul(id="check_disciplines", name="discGroup")
             li(ng-repeat="disc in disciplinesScope")
-                input(type="checkbox", name="disciplinesCheck", id="{{disc.id}}", value="{{disc.value}}", ng-model="disc.checked", ng-change="changeDiscStatus($index)", ng-disabled="!disc.checked && numCheckedDisc>5")
+                input(type="checkbox", name="disciplinesCheck", id="{{disc.id}}", value="{{disc.value}}", ng-model="disc.checked", ng-change="changeDiscStatus($index)")
                 label {{disc.name}}
 
 
     fieldset
         legend Choose two equipments
-        div(ng-if="checkEquipDisable" class='notification') You can't choose more than 2 equipments. Please uncheck others to choose this one.
-
+        div(ng-if="formValidator.isMoreThan2" class='notification') You can't choose more than 2 equipments. Please uncheck others to choose this one.
+        div(ng-show="!formValidator.isEquipCheckedValid") Need to select 2 items
         ul(id="check_equipments")
             li(ng-repeat="equip in equipmentsScope")
-                input(type="checkbox", id="{{equip.id}}",value="{{equip.value}}", ng-model="equip.checked", ng-change="changeEquipStatus($index)", ng-disabled="!equip.checked && numCheckedEquip>2")
+                input(type="checkbox", id="{{equip.id}}",value="{{equip.value}}", ng-model="equip.checked", ng-change="changeEquipStatus($index)")
                 label {{equip.name}}
 
-    input.button(id='submit-kai-equipment' type="submit" value="Create Game!")
+    div(ng-show="!isWholeFormValid") Form not valid!
+    input.button(id='submit-kai-equipment', type="submit", value="Create Game!")
+

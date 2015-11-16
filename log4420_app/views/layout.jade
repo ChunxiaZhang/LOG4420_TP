@@ -3,7 +3,6 @@ html(ng-app="gameApp")
     head
         title= title
         link(rel='stylesheet', href='/stylesheets/style.css')
-        link(rel='stylesheet', href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css")
         block head
     body
         header
@@ -12,11 +11,12 @@ html(ng-app="gameApp")
         div(class="container")
             block content
 
-    script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js")
-    script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js")
-    script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-messages.js")
+    //script(src="./../js/angular.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js")
+    script(src="./../js/angular-messages.js")
+    script(src="./../js/angular-route.min.js")
     script(src="./../app/app.js")
-    script(src="./../controllers/formControllers.js")
+    script(src="./../app/formController.js")
     aside
         figure
             a(href='http://www.projectaon.org/en/Main/Home')

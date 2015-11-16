@@ -7,7 +7,7 @@ var session = require('express-session');
 var dbRecords = require("./../db/records");
 
 // return to a part of pages
-router.get('/page/:pageId/:partId', function(req, res, next) {
+router.get('/:pageId/:partId', function(req, res, next) {
     var pageId = req.params.pageId;
     var partId = req.params.partId;
 

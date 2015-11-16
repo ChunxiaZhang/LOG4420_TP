@@ -40,7 +40,7 @@ router.post("/game/page1", validation.validateChoices(), function(req, res) {
 
 
     res.render(page, function(err, html) {
-
+        console.log("render to page 1");
         res.render('page', { title: 1, htmlPage: html})
     });
 

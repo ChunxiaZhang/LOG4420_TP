@@ -10,7 +10,7 @@ var dbRecords = require("./../db/records");
 /*
  * récupère tous les joueurs qui se trouvent dans la base de données
  * */
-router.get("/game/players", function(req, res){
+router.get("", function(req, res){
     dbPlayers.getAllPlayers(req, res, function(docs){
         res.json(docs);
     });
